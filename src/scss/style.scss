@@ -1,10 +1,9 @@
 @use './base/variable' as var;
 @use '../../node_modules/normalize.css/normalize.css';
-@use '../../node_modules/swiper/swiper-bundle.min.css';
+@use '../../node_modules/aos/dist/aos.css';
 @use './fonts.scss';
 @use 'global-style';
 @use 'privacy/privacy';
-@use 'business-card/style-bcard';
 @use './modules/form';
 @use './modules/swiper';
 @use './modules/cards';

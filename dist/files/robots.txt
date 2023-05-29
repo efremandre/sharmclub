@@ -1,3 +1,4 @@
 User-agent: *
-Sitemap: https://https://SITENAME.ru/sitemap.xml
+Sitemap: https://https://sharmclub.ru/sitemap.xml
 Disallow: /privacy/*.*
+Disallow: /oferta/*.*

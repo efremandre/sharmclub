@@ -11,7 +11,7 @@
 	@include mix.displayFlex(flex, center, center);
 	height: 100%;
 	min-height: 100vh;
-	background: linear-gradient(115deg, #000000 33%, #19003A 97%) url('../../assets/images/hero/bg-hero.png') top center / cover no-repeat;
+	background: url('../../assets/images/hero/hero-bg.png') top center / cover no-repeat;
 
 	@media (any-hover: hover) {
 		background-attachment: fixed;
@@ -63,6 +63,17 @@
 
 		&__button_call {
 			display: none;
+		}
+	}
+
+	&__ticker {
+		position: absolute;
+		left: 0;
+		bottom: 50px;
+		background: var.$accentColorTwo;
+
+		& .ticker__item {
+			animation: ticker 15s linear infinite;
 		}
 	}
 }

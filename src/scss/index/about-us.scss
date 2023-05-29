@@ -4,47 +4,47 @@
 @use '../modules/button-dawn';
 
 .main__about-us {
-  padding: 3em 0;
-  background: var.$accentColor;
+	padding: 3em 0;
 }
 
 .about-us {
-  &__row {
-    @include mix.displayFlex(flex, start, start);
-    flex-direction: row-reverse;
-    margin: 0 -2em;
-  }
+	&__row {
+		@include mix.displayFlex(flex, start, start);
+		flex-direction: row-reverse;
+		margin: 0 -2em;
+	}
 
-  &__content {
-    flex: 0 1 55%;
-    padding: 0 2em;
-  }
-  
-  &__title {
-    color: var.$lightColor;
-    text-align: left;
-  }
+	&__content {
+		flex: 0 1 55%;
+		padding: 0 2em;
+	}
 
-  &__text {
-    margin: 1.5em 0;
-    &>p {
-      color: var.$lightColor;
-      margin-bottom: 1em;
-    }
-  }
+	&__title {
+		color: var.$lightColor;
+		text-align: left;
+	}
 
-  &__image-wrapper {
-    flex: 0 1 45%;
-    height: 400px;
-    overflow: hidden;
-    padding: 0 2em 0 0;
+	&__text {
+		margin: 1.5em 0;
 
-    &>img {
-      height: 100%;
-      margin: 0 auto;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-  }
+		&>p {
+			color: var.$lightColor;
+			margin-bottom: 1em;
+		}
+	}
+
+	&__image-wrapper {
+		flex: 0 1 45%;
+		height: 400px;
+		overflow: hidden;
+		padding: 0 2em 0 0;
+
+		&>img {
+			height: 100%;
+			margin: 0 auto;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	}
 
 }

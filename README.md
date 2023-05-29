@@ -24,4 +24,3 @@
 * SCSS3
 * JavaScript
 * AOS.js
-* Swiper.js

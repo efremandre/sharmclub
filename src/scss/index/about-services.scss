@@ -4,45 +4,46 @@
 @use '../modules/button-dawn';
 
 .main__about-services {
-  padding: 3em 0;
-  background: var.$accentColor;
+	padding: 3em 0;
+	background: var.$mainAccentBg;
 }
 
 .about-services {
-  &__row {
-    @include mix.displayFlex(flex, start, start);
-    margin: 0 -2em;
-  }
+	&__row {
+		@include mix.displayFlex(flex, start, start);
+		margin: 0 -2em;
+	}
 
-  &__content {
-    flex: 0 1 60%;
-    padding: 0 2em 0 3em;
-  }
-  
-  &__title {
-    color: var.$lightColor;
-    text-align: left;
-  }
+	&__content {
+		flex: 0 1 60%;
+		padding: 0 2em 0 3em;
+	}
 
-  &__text {
-    margin: 1.5em 0;
-    &>p {
-      color: var.$lightColor;
-      margin-bottom: 1em;
-    }
-  }
+	&__title {
+		color: var.$lightColor;
+		text-align: left;
+	}
 
-  &__image-wrapper {
-    flex: 0 1 40%;
-    height: 400px;
-    padding: 0 0 0 2em;
-    overflow: hidden;
+	&__text {
+		margin: 1.5em 0;
 
-    &>img {
-      height: 100%;
-      margin: 0 auto;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-  }
+		&>p {
+			color: var.$lightColor;
+			margin-bottom: 1em;
+		}
+	}
+
+	&__image-wrapper {
+		flex: 0 1 40%;
+		height: 400px;
+		padding: 0 0 0 2em;
+		overflow: hidden;
+
+		&>img {
+			height: 100%;
+			margin: 0 auto;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	}
 }

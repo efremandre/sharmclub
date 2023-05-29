@@ -42,11 +42,10 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"aos": "^2.3.4",
 		"gulp-html-beautify": "^1.0.1",
 		"gulp-htmlmin": "^5.0.1",
 		"gulp-zip": "^5.1.0",
-		"normalize.css": "^8.0.1",
-		"swiper": "^8.4.6",
-		"vanilla-lazyload": "^17.8.3"
+		"normalize.css": "^8.0.1"
 	}
 }
