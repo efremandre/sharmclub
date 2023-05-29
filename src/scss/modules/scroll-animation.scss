@@ -1,0 +1,73 @@
+@use '../base/variable' as var;
+@use '../base/extentsions';
+
+.buttons-animation {
+  opacity: 0;
+  transform: translateY(10px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 3s ease, opacity 3s ease;
+    transform: translateY(0%);
+  }
+}
+
+.animation {
+  opacity: 0;
+  transform: translateY(40px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateY(0%);
+  }
+}
+
+.animationTitle {
+  opacity: 0;
+  transform: translateY(40px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 2s ease, opacity 1s ease;
+    transform: translateY(0%);
+  }
+}
+
+.animationTop{
+  opacity: 0;
+  transform: translateY(-100px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 2s ease, opacity 1s ease;
+    transform: translateY(0%);
+  }
+}
+
+.animationLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateX(0%);
+  }
+}
+
+.animationRight {
+  opacity: 0;
+  transform: translateX(40px);
+  &.element-show {
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateX(0%);
+  }
+}
+
+.bcard-animation {
+  opacity: 0;
+  transform: scale(0);
+  &.element-show {
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: scale(1);
+  }
+}
+
