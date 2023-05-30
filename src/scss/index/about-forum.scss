@@ -8,10 +8,12 @@
 }
 
 .about-forum {
+	background: url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
+
 	&__row {
-		@include mix.displayFlex(flex, start, start);
+		@include mix.displayFlex(flex, start, center);
 		flex-direction: row-reverse;
-		margin: 0 -2em;
+		margin: 0 -2em 3em -2em;
 	}
 
 	&__content {
@@ -20,6 +22,7 @@
 	}
 
 	&__title {
+		margin-bottom: 1em;
 		color: var.$lightColor;
 		text-align: left;
 	}
@@ -33,11 +36,24 @@
 		}
 	}
 
+	&__list {
+		padding-left: 10px;
+		list-style-type: "– ";
+
+		&>li {
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	&__image-wrapper {
 		flex: 0 1 45%;
 		height: 400px;
 		overflow: hidden;
-		padding: 0 2em 0 0;
+		padding: 0 2em;
 
 		&>img {
 			height: 100%;
@@ -46,5 +62,9 @@
 			border-radius: 8px;
 		}
 	}
+
+	// &__image-wrapper_center {
+	// 	padding: 0 0 0 2em;
+	// }
 
 }

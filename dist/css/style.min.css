@@ -2771,18 +2771,22 @@ a:focus {
   padding: 3em 0;
 }
 
+.about-forum {
+  background: url("../assets/images/about-forum/bg-decore-forum.png") center right no-repeat;
+}
 .about-forum__row {
   display: flex;
   justify-content: start;
-  align-items: start;
+  align-items: center;
   flex-direction: row-reverse;
-  margin: 0 -2em;
+  margin: 0 -2em 3em -2em;
 }
 .about-forum__content {
   flex: 0 1 55%;
   padding: 0 2em;
 }
 .about-forum__title {
+  margin-bottom: 1em;
   color: #fff;
   text-align: left;
 }
@@ -2793,11 +2797,21 @@ a:focus {
   color: #fff;
   margin-bottom: 1em;
 }
+.about-forum__list {
+  padding-left: 10px;
+  list-style-type: "– ";
+}
+.about-forum__list > li {
+  margin-bottom: 1em;
+}
+.about-forum__list > li:last-child {
+  margin-bottom: 0;
+}
 .about-forum__image-wrapper {
   flex: 0 1 45%;
   height: 400px;
   overflow: hidden;
-  padding: 0 2em 0 0;
+  padding: 0 2em;
 }
 .about-forum__image-wrapper > img {
   height: 100%;
