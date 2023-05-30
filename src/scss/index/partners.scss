@@ -7,5 +7,53 @@
 }
 
 .partners {
-	min-height: 10vh;
+	position: relative;
+	z-index: 2;
+	overflow-x: hidden;
+
+	&__row {
+		@include mix.displayFlex(flex, start, center);
+		gap: 60px;
+		animation: marquee 200s linear infinite;
+	}
+
+	&__card {
+		flex-shrink: 0;
+		@include mix.displayFlex(flex, center, center);
+		padding: .5em;
+		width: 100%;
+		max-width: 200px;
+		border: 2px solid var.$accentColorTwo;
+		border-radius: var.$borderRadius;
+		background: var.$mainAccentBg;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		transition: background-size 10s ease;
+	}
+
+	&__wrapper-image {
+		width: 115px;
+		height: 115px;
+
+		&>img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
+	@keyframes marquee {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
 }
