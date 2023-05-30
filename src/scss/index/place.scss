@@ -6,12 +6,12 @@
 	background: var.$mainAccentBg;
 
 	&__wrapper {
-		@include mix.displayFlex(flex, space-between, center);
+		@include mix.displayFlex(flex, space-between, stretch);
 	}
 
 	&__block-description {
 		flex: 0 1 40%;
-		padding: 0 3em;
+		padding: 3em;
 	}
 
 	&__description-body {
@@ -72,5 +72,6 @@
 
 	&__slider-container {
 		position: relative;
+		height: 100%;
 	}
 }

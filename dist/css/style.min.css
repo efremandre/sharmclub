@@ -2253,12 +2253,13 @@ a:focus {
 }
 .swiper {
   max-width: 900px;
+  height: 100%;
   margin: 0;
 }
 
 .swiper-slide {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .swiper-slide > img {
@@ -2938,11 +2939,11 @@ a:focus {
 .place__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 .place__block-description {
   flex: 0 1 40%;
-  padding: 0 3em;
+  padding: 3em;
 }
 .place__description-body {
   max-width: 500px;
@@ -2992,6 +2993,7 @@ a:focus {
 }
 .place__slider-container {
   position: relative;
+  height: 100%;
 }
 
 .main__price {
