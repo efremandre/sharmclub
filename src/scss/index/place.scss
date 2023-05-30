@@ -2,9 +2,9 @@
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
 
-.main__place {}
-
 .place {
+	background: var.$mainAccentBg;
+
 	&__wrapper {
 		@include mix.displayFlex(flex, space-between, center);
 	}

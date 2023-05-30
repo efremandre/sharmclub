@@ -2920,6 +2920,9 @@ a:focus {
   margin: 0 auto;
 }
 
+.place {
+  background: #9F3119;
+}
 .place__wrapper {
   display: flex;
   justify-content: space-between;
@@ -3047,12 +3050,120 @@ a:focus {
   display: none;
 }
 
+.wrapper-bg {
+  position: relative;
+  overflow: hidden;
+}
+.wrapper-bg .light {
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  width: 0;
+  top: 20vh;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  background-color: #E8C87A;
+  box-shadow: #E8C87A 0px 0px 16px 2px;
+}
+.wrapper-bg .x1 {
+  animation: floatUp 8s infinite linear;
+  transform: scale(1);
+}
+.wrapper-bg .x2 {
+  animation: floatUp 7s infinite linear;
+  transform: scale(1.6);
+  left: 15%;
+}
+.wrapper-bg .x3 {
+  animation: floatUp 2.5s infinite linear;
+  transform: scale(0.5);
+  left: -15%;
+}
+.wrapper-bg .x4 {
+  animation: floatUp 4.5s infinite linear;
+  transform: scale(1.2);
+  left: -34%;
+}
+.wrapper-bg .x5 {
+  animation: floatUp 8s infinite linear;
+  transform: scale(2.2);
+  left: -57%;
+}
+.wrapper-bg .x6 {
+  animation: floatUp 3s infinite linear;
+  transform: scale(0.8);
+  left: -81%;
+}
+.wrapper-bg .x7 {
+  animation: floatUp 5.3s infinite linear;
+  transform: scale(3.2);
+  left: 37%;
+}
+.wrapper-bg .x8 {
+  animation: floatUp 4.7s infinite linear;
+  transform: scale(1.7);
+  left: 62%;
+}
+.wrapper-bg .x9 {
+  animation: floatUp 4.1s infinite linear;
+  transform: scale(0.9);
+  left: 85%;
+}
+@keyframes floatUp {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    top: 0vh;
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
 .main__organizers {
   padding: 3em 0;
 }
 
 .organizers {
-  min-height: 10vh;
+  position: relative;
+  z-index: 2;
+}
+.organizers__row {
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  gap: 30px;
+}
+.organizers__card {
+  flex: 0 1 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border: 2px solid #E8C87A;
+  border-radius: 8px;
+  background: #9F3119 url("../assets/images/organizers/bg-decore-organisations-card.svg") center bottom no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.organizers__card-title {
+  font-family: "Tenor Sans";
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1200));
+  line-height: 1.3em;
+  text-align: center;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
 }
 
 .main__partners {
