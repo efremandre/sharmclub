@@ -4,11 +4,11 @@
 
 .logo {
 	@include mix.displayFlex(flex, center, center);
-	transition: .6s transform ease;
+	transition: 2s transform ease;
 
 	@media (any-hover: hover) {
 		&:hover {
-			transform: rotateY(360deg)
+			transform: scale(.9);
 		}
 	}
 }
