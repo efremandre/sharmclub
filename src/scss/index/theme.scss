@@ -7,5 +7,72 @@
 }
 
 .theme {
-	min-height: 10vh;
+	position: relative;
+	background: var.$mainAccentBg;
+
+	&::before,
+	&::after {
+		@extend %pseudoElement;
+		top: 0;
+		width: 200px;
+		height: 100%;
+	}
+
+	&::after {
+		left: 0;
+		background: url('../../assets/images/theme/bg-decore-theme-right.png') right center no-repeat;
+	}
+
+	&::before {
+		right: 0;
+		background: url('../../assets/images/theme/bg-decore-theme-left.png') left center no-repeat;
+	}
+
+	&__title {
+		margin-bottom: .5em;
+	}
+
+	&__wrapper {
+		@include mix.displayFlex(flex, center, center);
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&__card {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 1.3rem 1rem;
+		font-family: var.$subFamily;
+		text-align: center;
+		text-transform: uppercase;
+		background: rgba(53, 55, 63, 0.3);
+		border: 2px solid #E8C87A;
+		border-radius: var.$borderRadius;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	&__number {
+		@include mix.adaptivFont(43, 23);
+		color: var.$accentColorTwo;
+		line-height: 1.2em;
+	}
+
+	&__card-title {
+		&>h3 {
+			margin: .5em 0;
+			@include mix.adaptivFont(26, 18);
+			line-height: 1.3em;
+		}
+
+	}
+
+	&__card-description {
+		margin-bottom: 1em;
+		font-size: 18px;
+		text-transform: none;
+	}
+
+	&__button {
+		margin: 0 auto;
+	}
 }

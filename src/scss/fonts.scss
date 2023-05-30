@@ -1,28 +1,23 @@
-@font-face{
-	font-family: Circe;
-	font-display: swap;
-	src: url("../assets/fonts/Circe-Bold.woff2") format("woff2"), url("../assets/fonts/Circe-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face{
+@font-face {
 	font-family: Circe;
 	font-display: swap;
 	src: url("../assets/fonts/Circe-Regular.woff2") format("woff2"), url("../assets/fonts/Circe-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
-@font-face{
-	font-family: Mont;
+
+@font-face {
+	font-family: Circe;
 	font-display: swap;
-	src: url("../assets/fonts/Mont-Bold.woff2") format("woff2"), url("../assets/fonts/Mont-Bold.woff") format("woff");
+	src: url("../assets/fonts/Circe-Bold.woff2") format("woff2"), url("../assets/fonts/Circe-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 }
-@font-face{
-	font-family: Mont;
+
+@font-face {
+	font-family: Tenor;
 	font-display: swap;
-	src: url("../assets/fonts/Mont-Regular.woff2") format("woff2"), url("../assets/fonts/Mont-Regular.woff") format("woff");
+	src: url("../assets/fonts/TenorSans-Regular.woff2") format("woff2"), url("../assets/fonts/TenorSans-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }

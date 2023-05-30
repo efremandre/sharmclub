@@ -8,7 +8,7 @@
 }
 
 .about-forum {
-	background: url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
+	background: var.$mainAccentBg url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
 
 	&__row {
 		@include mix.displayFlex(flex, start, center);
@@ -22,7 +22,7 @@
 	}
 
 	&__title {
-		margin-bottom: 1em;
+		margin-bottom: .5em;
 		color: var.$lightColor;
 		text-align: left;
 	}
