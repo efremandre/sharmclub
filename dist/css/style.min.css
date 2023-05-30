@@ -1961,7 +1961,7 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-style: normal;
 }
-.burger:before, .burger:after, .nav__link:before, .phone__link:after, .form-preloader, .form-preloader:before {
+.burger:before, .burger:after, .phone__link:after, .form-preloader, .form-preloader:before {
   position: absolute;
   content: "";
 }
@@ -1973,7 +1973,7 @@ body {
   scrollbar-width: thin;
   font-family: "Circle", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
-  line-height: 1.5em;
+  line-height: 1.3em;
   letter-spacing: 0.02em;
   color: #FBFBFB;
   scroll-behavior: smooth;
@@ -2458,11 +2458,13 @@ a:focus {
   width: 100%;
   max-width: 270px;
   padding: 1em;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1200));
-  color: #fff;
-  line-height: 1.5em;
+  font-size: calc(12px + 4 * ((100vw - 320px) / 1200));
+  color: #111111;
+  line-height: 1.3em;
   font-weight: 400;
-  background: #E8C87A;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(263.09deg, #F0D17B 0%, #CFA453 100%);
   border-radius: 8px;
   transition: opacity 0.5s ease;
 }
@@ -2502,35 +2504,13 @@ a:focus {
     opacity: 1;
   }
 }
-.social__icon {
-  width: 2.6em;
-  height: 2.6em;
-  transition: opacity 0.3s ease;
+.social__link {
+  transition: opacity 0.6s ease;
 }
 @media (any-hover: hover) {
-  .social__icon:hover {
+  .social__link:hover {
     opacity: 0.7;
   }
-}
-.social__label {
-  z-index: 3;
-  position: absolute;
-  display: block;
-  box-sizing: border-box;
-  top: -130%;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0);
-  width: 100%;
-  margin: 0 auto;
-  padding: 0.8em;
-  text-align: center;
-  color: #fff;
-  border-radius: 8px;
-  background: #E8C87A;
-  box-shadow: 0 10px 8px -4px rgba(1, 1, 1, 0.2);
-  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .logo {
@@ -2552,7 +2532,6 @@ a:focus {
   box-sizing: border-box;
   top: 0;
   left: 0;
-  padding: 0.5em 0;
   color: #fff;
   background: rgba(40, 40, 40, 0.9);
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
@@ -2561,8 +2540,11 @@ a:focus {
 .navigation._hidden {
   transform: translateY(-150%);
 }
-.navigation__zero-block {
-  flex: 0 1 220px;
+.navigation__top-row {
+  background-color: #BE300C;
+}
+.navigation__bottom-row {
+  padding: 0.5em 0;
 }
 .navigation__wrapper {
   display: flex;
@@ -2585,13 +2567,25 @@ a:focus {
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
-  padding: 1em 0;
+  padding: 0.5em 0;
+}
+.navigation__buttons {
+  flex: 0 1 420px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+.navigation__button {
+  font-size: calc(11px + 1 * ((100vw - 320px) / 1200));
+  line-height: 1.2em;
+  max-width: 200px;
 }
 
 .nav {
   flex: 1 1 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .nav__list {
@@ -2605,26 +2599,18 @@ a:focus {
 .nav__link {
   position: relative;
   display: block;
-  padding: 1em;
+  padding: 0 5px;
+  font-weight: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5em;
-  transition: text-decoration 0.8s ease;
-}
-.nav__link:before {
-  bottom: 15px;
-  left: 18px;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transition: width 0.5s ease-in-out, color 0.5s ease-in-out;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1200));
+  line-height: 1.3em;
+  text-decoration: underline;
+  transition: color 0.8s ease;
 }
 @media (any-hover: hover) {
   .nav__link:hover {
-    color: #fff;
-  }
-  .nav__link:hover:before {
-    width: 70%;
+    color: linear-gradient(263.09deg, #F0D17B 0%, #CFA453 100%);
+    text-decoration: none;
   }
 }
 

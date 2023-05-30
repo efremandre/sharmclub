@@ -46,41 +46,57 @@
     <div class="wrapper">
         <header class="header">
             <div data-header class="header__navigation navigation">
-                <div class="container">
-                    <div class="navigation__wrapper">
-                        <div class="navigation__logo logo">
-                            <a href="#" class="navigation__logo-link logo__link">
-                                <img class="logo__nofull" src="./assets/images/logo.svg" alt="Logo">
-                            </a>
-                        </div>
-                        <nav class="navigation__nav nav" data-nav>
-                            <ul class="nav__list">
-                                <li><a href="#aboutUs" class="nav__link">Lorem</a></li>
-                                <li><a href="#catalog" class="nav__link">Lorem</a></li>
-                                <li><a href="#services" class="nav__link">Lorem</a></li>
-                                <li><a href="#contact" class="nav__link">Lorem</a></li>
-                                <li class="nav__item-hidden"><a href="tel:+79181672061" class="nav__link">+7(999) 999-99-99</a></li>
-                            </ul>
-                        </nav>
-                        <div class="navigation__block">
-                            <div class="navigation__contactinfo">
-                                <div class="navigation__phone phone">
-                                    <a href="tel:+79999999999" class="phone__link" title="Телефон">+7(999) 999-99-99</a>
+                <div class="navigation__top-row">
+                    <div class="container">
+                        <div class="navigation__wrapper">
+                            <div class="navigation__block">
+                                <div class="navigation__contactinfo">
+                                    <div class="navigation__phone phone">
+                                        <a href="tel:+79999999999" class="phone__link" title="Телефон">+7(999) 999-99-99</a>
+                                    </div>
                                 </div>
-                                <div class="navigation__worktime">
-
+                                <div class="navigation__social social">
+                                    <ul class="social__list">
+                                        <li><a href="https://wa.me/7999999999" class="social__link social__link_wa">
+                                                <img src="./assets/images/icon/wa.svg" alt="wa" title="WhatsApp Марина Шарм">
+                                            </a>
+                                        </li>
+                                        <li><a href="https://t.me/MarinaSharm777" class="social__link social__link_wa">
+                                                <img src="./assets/images/icon/tg.svg" alt="tg" title="Telegram Марина Шарм">
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
+                                <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+                                    <span class="burger__line"></span>
+                                </button>
                             </div>
-                            <div class="navigation__social social">
-                                <ul class="social__list">
-                                    <li><a href="https://wa.me/79181672061" class="social__link social__link_wa">
-                                            <img src="./assets/images/icon/wa.svg" alt="WhatsApp" title="WhatsApp">
-                                        </a></li>
+                            <nav class="navigation__nav nav" data-nav>
+                                <ul class="nav__list">
+                                    <li><a href="#aboutForum" class="nav__link">О форуме</a></li>
+                                    <li><a href="#speakers" class="nav__link">Спикеры</a></li>
+                                    <li><a href="#price" class="nav__link">Тарифы</a></li>
+                                    <li><a href="#theme" class="nav__link">Темы</a></li>
+                                    <li><a href="#place" class="nav__link">Место проеведения</a></li>
+                                    <li><a href="#contact" class="nav__link">Обратная связь</a></li>
+                                    <li class="nav__item-hidden"><a href="tel:+79999999999" class="nav__link">+7(999) 999-99-99</a></li>
                                 </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation__bottom-row">
+                    <div class="container">
+                        <div class="navigation__wrapper">
+                            <div class="navigation__logo logo">
+                                <a href="#" class="navigation__logo-link logo__link">
+                                    <img class="logo__nofull" src="./assets/images/logo.svg" alt="Logo">
+                                </a>
                             </div>
-                            <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
-                                <span class="burger__line"></span>
-                            </button>
+                            <div class="navigation__buttons">
+                                <a title="Купить билет на форум" href="#price" class="navigation__button button">Принять участие</a>
+                                <a title="Получить обратную связь" href="#contact" class="navigation__button button">Предложить тему</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,7 +202,7 @@
                     </div>
                 </div>
             </section>
-            <section class="main__price price">
+            <section id="price" class="main__price price">
                 <div class="container">
                     <h2 class="price__title subtitle ">Тарифы</h2>
                     <div class="price__wrapper-card">
