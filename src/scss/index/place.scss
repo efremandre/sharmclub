@@ -1,0 +1,15 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.main__place {
+	padding: 3em 0;
+}
+
+.place {
+	min-height: 10vh;
+
+	&__slider-container {
+		position: relative;
+	}
+}

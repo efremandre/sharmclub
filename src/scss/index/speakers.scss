@@ -1,0 +1,11 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.main__speakers {
+	padding: 3em 0;
+}
+
+.speakers {
+	min-height: 10vh;
+}

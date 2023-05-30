@@ -46,6 +46,7 @@
 		"gulp-html-beautify": "^1.0.1",
 		"gulp-htmlmin": "^5.0.1",
 		"gulp-zip": "^5.1.0",
+		"swiper": "^8.4.6",
 		"normalize.css": "^8.0.1"
 	}
 }

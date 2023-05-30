@@ -1,8 +1,13 @@
 @use '../base/variable' as var;
 @use 'fullscreen';
-@use 'about-us';
-@use 'about-services';
-@use 'services';
+@use 'about-forum';
+@use 'speakers';
+@use 'theme';
+@use 'auction';
+@use 'place';
+@use 'price';
+@use 'organizers';
+@use 'partners';
 @use 'contact';
 @use '../modules/modal-img';
 

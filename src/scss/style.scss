@@ -1,5 +1,6 @@
 @use './base/variable' as var;
 @use '../../node_modules/normalize.css/normalize.css';
+@use '../../node_modules/swiper/swiper-bundle.min.css';
 @use '../../node_modules/aos/dist/aos.css';
 @use './fonts.scss';
 @use 'global-style';
@@ -8,7 +9,6 @@
 @use './modules/swiper';
 @use './modules/cards';
 @use './modules/ticker';
-@use './modules/scroll-animation';
 @use './modules/scrollbar';
 @use './modules/button-up';
 @use './modules/general-button';

@@ -4,57 +4,63 @@
 @use '../modules/button-dawn';
 
 .swiper {
-  max-width: 1200px;
-  padding: 20px 20px;
+	max-width: 800px;
 }
 
-.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after {
+	width: 30px;
+	height: 18px;
+	font-size: 0;
+	color: var.$lightColor;
+}
+
 .swiper-button-prev:after {
-  font-size: 26px;
-  color: var.$lightColor;
+	background: url('../../assets/images/icon/prev.svg') center center / cover no-repeat;
+}
+
+.swiper-button-next:after {
+	background: url('../../assets/images/icon/next.svg') center center / cover no-repeat;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: var.$accentColorTwo;
-  transition: .8s opacity ease, .4s transform ease;
+	top: 95%;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	transition: .8s opacity ease, .4s transform ease;
 
-  @media (any-hover: hover) {
-    &:hover {
-      opacity: .6;
-    }
-  }
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: .6;
+		}
+	}
 
-  &:active {
-    transform: scale(.8);
-  }
+	&:active {
+		transform: scale(.8);
+	}
 }
 
 .swiper-button-next {
-  right: 6%;
+	right: 30px;
 }
 
 .swiper-button-prev {
-  left: 6%;
+	left: 30px;
 }
 
 .swiper-pagination {
 
-  &>span {
-    background: var.$accentColorTwo;
-  }
+	&>span {
+		background: var.$accentColorTwo;
+	}
 }
 
 .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+	width: 12px;
+	height: 12px;
+	border-radius: 0;
 }
 
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: -20px;
-}
+.swiper-pagination-bullets.swiper-pagination-horizontal {}

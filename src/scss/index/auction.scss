@@ -1,0 +1,11 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.main__auction {
+	padding: 3em 0;
+}
+
+.auction {
+	min-height: 10vh;
+}

@@ -5,11 +5,17 @@ import { hello } from './modules/_hello.js'
 import { pressDawn } from "./modules/_pressDawn.js"
 import { pressUp } from "./modules/_pressUp.js"
 import { scrollHeader } from "./modules/_scrollHeader.js"
+import { swiper } from "./modules/_swiper.js"
 
-hello()
-burger()
-aos()
-scrollHeader()
-pressDawn()
-pressUp()
-sendForm()
+try {
+	hello()
+	burger()
+	aos()
+	scrollHeader()
+	swiper()
+	pressDawn()
+	pressUp()
+	sendForm()
+} catch (error) {
+	console.error(error.message)
+}
