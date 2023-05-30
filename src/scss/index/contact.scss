@@ -5,9 +5,12 @@
 
 .main__contact {
 	padding: 3em 0;
-	background: radial-gradient(83.23% 110.53% at 50% 50%, rgba(147, 128, 106, 0.36) 2.6%, rgba(182, 135, 78, 0.36) 63.7%, rgba(104, 77, 50, 0.36) 87.23%, rgba(210, 181, 107, 0.36) 100%)
-		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-		, linear-gradient(88.64deg, #CFA453 -9.77%, #B9903D -7.91%, #BD9C4E 19.9%, #D0B769 42.04%, #E2D197 59.66%, #E6E3C0 78.08%, #DACD83 99.52%, #D2BB74 106.61%);
+	background: radial-gradient(83.23% 110.53% at 50% 50%,
+			rgba(147, 128, 106, 0.36) 2.6%,
+			rgba(182, 135, 78, 0.36) 63.7%,
+			rgba(104, 77, 50, 0.36) 87.23%,
+			rgba(210, 181, 107, 0.36) 100%),
+		linear-gradient(88.64deg, #CFA453 -9.77%, #B9903D -7.91%, #BD9C4E 19.9%, #D0B769 42.04%, #E2D197 59.66%, #E6E3C0 78.08%, #DACD83 99.52%, #D2BB74 106.61%);
 	box-shadow: inset 0px 4px 24px rgba(255, 230, 97, 0.25);
 }
 
@@ -26,17 +29,18 @@
 	}
 
 	&__title {
-		margin-bottom: 1.3em;
-		color: var.$lightColor;
+		margin-bottom: .3em;
+		color: var.$darkColor;
 	}
 
 	&__contact-block {
 		@include mix.displayFlex(flex, center, center);
 		flex-direction: column;
 		width: 100%;
-		max-width: 500px;
+		max-width: 900px;
 		margin: 0 auto;
 		padding: 0 1em;
+		color: var.$darkColor;
 	}
 
 	&__contact-description {
@@ -44,19 +48,14 @@
 		text-align: center;
 	}
 
-	&__social {
-		margin-bottom: 20px;
-	}
-
-	&__list {
-		@include mix.displayFlex(flex, center, center);
-	}
-
 	&__form-container {
 		width: 100%;
 	}
 
-	&__button {
+	&__button-form {
 		max-width: 100%;
+		color: var.$lightColor;
+		background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
+			linear-gradient(262.56deg, #292B32 0%, #0C0D10 100%);
 	}
 }

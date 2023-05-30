@@ -4,26 +4,34 @@
 			<h2 class="contact__title subtitle">Связаться с нами</h2>
 			<div class="contact__wrapper">
 				<div class="contact__contact-block">
-					<p class="contact__contact-description ">Неудобно сейчас?<br>Оставьте свои контакты и мы перезвоним.
-					</p>
+					<p class="contact__contact-description">Если у вас остались вопросы или вы желаете сделать предложение,
+						оставьте ваши контакты и сообщение в форме ниже. Наш менеджер свяжеться с вами в самое ближайшее время и
+						сразу с ответом.</p>
 					<div class="contact__form-container form-container ">
 						<div class="form-preloader"></div>
 						<form class="ajax-contact-form contact__form form" action="#">
-							<div class="form__input">
-								<input id="name" type="text" name="name" placeholder="Ваше имя">
+							<div class="form__input-row">
+								<div class="form__input">
+									<input id="name" type="text" name="name" placeholder="Ваше имя">
+								</div>
+								<div class="form__input">
+									<input id="tel" type="tel" name="tel" placeholder="Ваш телефон" required data-phone-pattern>
+								</div>
+								<div class="form__input">
+									<input id="mail" type="mail" name="mail" placeholder="Ваша почта" required>
+								</div>
 							</div>
 							<div class="form__input">
-								<input id="tel" type="tel" name="tel" placeholder="Ваш телефон" required data-phone-pattern>
-							</div>
-							<div class="form__input">
-								<textarea id="message" name="message" cols="40" rows="3" class="message"
+								<textarea id="message" name="message" cols="40" rows="6" class="message"
 									placeholder="Сообщение..."></textarea>
 							</div>
-							<button class="contact__button button button_accent">Заказать звонок</button>
 							<div class="form__check">
-								<p>Нажимая кнопку вы подтверждаете что ознакомились с<br><a title="Политика конфиденциальности"
-										target="_blank" href="/privacy.html">политикой конфиденциальности</a></p>
+								<input type="checkbox" checked>
+								<p>соглашаюсь с <a title="Политика конфиденциальности" target="_blank" href="/privacy.html">политикой
+										конфиденциальности и даю согласие на обработку персональных
+										данных</a></p>
 							</div>
+							<button class="contact__button-form button">Отправить</button>
 						</form>
 					</div>
 				</div>
