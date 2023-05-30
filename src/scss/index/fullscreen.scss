@@ -18,27 +18,69 @@
 	}
 
 	&__wrapper {
-		@include mix.displayFlex(flex, center, center);
+		@include mix.displayFlex(flex, center, flex-start);
 		flex-direction: column;
 		position: relative;
 		width: 100%;
 		padding-bottom: 1em;
-		text-align: center;
 		letter-spacing: 0.02em;
+	}
+
+	&__info {
+		@include mix.displayFlex(flex, flex-start, center);
+		gap: 10px;
+	}
+
+	&__date,
+	&__address {
+		position: relative;
+		padding-left: 10px;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 0;
+			width: 2px;
+			height: 100%;
+			background: #fff;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__date {
+		color: var.$accentColorTwo;
+	}
+
+	&__address {
+		text-decoration: underline;
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 
 	&__main-title {
 		margin-bottom: 0.3em;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 	}
 
 	&__subtitle {
 		@include mix.adaptivFont(20, var.$generalBigTextSizeMin);
-		margin-bottom: 1em;
+		margin-bottom: 2em;
 		color: #FFFFFF;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 	}
 
 	&__buttons {
-		@include mix.displayFlex(flex, center, center);
+		@include mix.displayFlex(flex, flex-start, center);
+		gap: 40px;
 		width: 100%;
 	}
 
@@ -46,35 +88,28 @@
 		box-sizing: border-box;
 	}
 
-	@media (any-hover: none) {
-		&__button_order-call {
-			display: none;
-		}
+	&__button-backcall {
+		text-decoration-line: underline;
+		text-transform: uppercase;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 
-		&__button_call {
-			display: flex;
-		}
-	}
-
-	@media (any-hover: hover) {
-		&__button_order-call {
-			display: flex;
-		}
-
-		&__button_call {
-			display: none;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 
 	&__ticker {
 		position: absolute;
 		left: 0;
-		bottom: 50px;
+		bottom: 70px;
 		width: 100%;
-		background: var.$accentColorTwo;
+		border: 2px solid var.$accentColorTwo;
+		background: rgba(232, 200, 122, 0.1);
 
 		& .ticker__item {
-			animation: ticker 15s linear infinite;
+			animation: ticker 12s linear infinite;
 		}
 	}
 }

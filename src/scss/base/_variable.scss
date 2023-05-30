@@ -32,10 +32,10 @@ $borderRadius: 8px;
 /// заголовок главный
 $titleColor: #FBFBFB; // color
 $titleWeight: 700; // font-weight
-$titleFontSize: 48; // font-size
-$titleFontSizeMin: 28; // font-size
-$titleHeight: 1.1em; // line-height
-$titleTransform: none; // text-transform
+$titleFontSize: 80; // font-size
+$titleFontSizeMin: 50; // font-size
+$titleHeight: 1.3em; // line-height
+$titleTransform: uppercase; // text-transform
 
 /// подзаголовок
 $subTitleColor: #FBFBFB; // color

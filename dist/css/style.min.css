@@ -2051,12 +2051,12 @@ a:focus {
 }
 
 .main-title {
-  font-size: calc(28px + 20 * ((100vw - 320px) / 1200));
+  font-size: calc(50px + 30 * ((100vw - 320px) / 1200));
   color: #FBFBFB;
   font-weight: 700;
-  line-height: 1.1em;
+  line-height: 1.3em;
   letter-spacing: 0.02em;
-  text-transform: none;
+  text-transform: uppercase;
 }
 
 .red {
@@ -2378,8 +2378,10 @@ a:focus {
 }
 .ticker__item {
   color: #fff;
-  font-size: 24px;
-  line-height: 130%;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.8px;
+  line-height: 1.3em;
   white-space: nowrap;
   flex-shrink: 0;
   padding: 0 5px;
@@ -2464,8 +2466,9 @@ a:focus {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  background: linear-gradient(263.09deg, #F0D17B 0%, #CFA453 100%);
   border-radius: 8px;
+  background: linear-gradient(263.09deg, #F0D17B 0%, #CFA453 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: opacity 0.5s ease;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -2680,56 +2683,88 @@ a:focus {
 .fullscreen__wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   position: relative;
   width: 100%;
   padding-bottom: 1em;
-  text-align: center;
   letter-spacing: 0.02em;
+}
+.fullscreen__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.fullscreen__date, .fullscreen__address {
+  position: relative;
+  padding-left: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+}
+.fullscreen__date::before, .fullscreen__address::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  transform: translateY(-50%);
+}
+.fullscreen__date {
+  color: #E8C87A;
+}
+.fullscreen__address {
+  text-decoration: underline;
+}
+@media (any-hover: hover) {
+  .fullscreen__address:hover {
+    text-decoration: none;
+  }
 }
 .fullscreen__main-title {
   margin-bottom: 0.3em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
 .fullscreen__subtitle {
   font-size: calc(16px + 4 * ((100vw - 320px) / 1200));
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
 .fullscreen__buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 40px;
   width: 100%;
 }
 .fullscreen__button {
   box-sizing: border-box;
 }
-@media (any-hover: none) {
-  .fullscreen__button_order-call {
-    display: none;
-  }
-  .fullscreen__button_call {
-    display: flex;
-  }
+.fullscreen__button-backcall {
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
 @media (any-hover: hover) {
-  .fullscreen__button_order-call {
-    display: flex;
-  }
-  .fullscreen__button_call {
-    display: none;
+  .fullscreen__button-backcall:hover {
+    text-decoration: none;
   }
 }
 .fullscreen__ticker {
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 70px;
   width: 100%;
-  background: #E8C87A;
+  border: 2px solid #E8C87A;
+  background: rgba(232, 200, 122, 0.1);
 }
 .fullscreen__ticker .ticker__item {
-  animation: ticker 15s linear infinite;
+  animation: ticker 12s linear infinite;
 }
 
 .main__about-forum {
