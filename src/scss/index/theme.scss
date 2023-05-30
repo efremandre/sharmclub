@@ -28,10 +28,6 @@
 		background: url('../../assets/images/theme/bg-decore-theme-left.png') left center no-repeat;
 	}
 
-	&__title {
-		margin-bottom: .5em;
-	}
-
 	&__wrapper {
 		@include mix.displayFlex(flex, center, center);
 		flex-direction: column;

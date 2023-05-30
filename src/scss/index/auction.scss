@@ -7,5 +7,28 @@
 }
 
 .auction {
-	min-height: 10vh;
+	&__wrapper {
+		padding: 2em;
+		border: 2px solid var.$accentColorTwo;
+		box-shadow: 0px 0px 60px rgba(240, 209, 123, 0.6);
+		background: rgba(53, 55, 63, 0.3);
+		border-radius: 8px;
+	}
+
+	&__image-wrapper {
+		margin: 0 auto 1.5em auto;
+		max-width: 500px;
+	}
+
+	&__description {
+		margin-bottom: 1em;
+		padding: 0 1em;
+		text-align: center;
+		@include mix.adaptivFont(22, 16);
+		line-height: 1.3em;
+	}
+
+	&__button {
+		margin: 0 auto;
+	}
 }
