@@ -2,12 +2,73 @@
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
 
-.main__place {
-	padding: 3em 0;
-}
+.main__place {}
 
 .place {
-	min-height: 10vh;
+	&__wrapper {
+		@include mix.displayFlex(flex, space-between, center);
+	}
+
+	&__block-description {
+		flex: 0 1 40%;
+		padding: 0 3em;
+	}
+
+	&__description-body {
+		max-width: 500px;
+	}
+
+	&__title {
+		text-align: left;
+	}
+
+	&__address {
+		position: relative;
+		padding-left: 20px;
+		text-decoration: underline;
+
+		&::before {
+			@extend %pseudoElement;
+			bottom: 3px;
+			left: 0;
+			width: 15px;
+			height: 100%;
+			background: url('../../assets/images/icon/map.svg') center center no-repeat;
+		}
+	}
+
+	&__text {
+		margin-bottom: 2em;
+
+		&>p {
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__buttons {
+		@include mix.displayFlex(flex, center, flex-start);
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__button {
+		max-width: 380px;
+	}
+
+	&__button-address {
+		max-width: 380px;
+		border: 2px solid var.$accentColorTwo;
+		color: var.$accentColorTwo;
+		background: none;
+	}
+
+	&__block-slider {
+		flex: 0 1 60%;
+	}
 
 	&__slider-container {
 		position: relative;

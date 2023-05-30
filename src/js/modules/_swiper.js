@@ -18,16 +18,8 @@ export function swiper() {
 				delay: 5000,
 			},
 			breakpoints: {
-				319: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-				},
-				569: {
-					slidesPerView: 2,
-				},
 				989: {
 					slidesPerView: 1,
-					spaceBetween: 30,
 					navigation: {
 						nextEl: '.swiper-button-next',
 						prevEl: '.swiper-button-prev',

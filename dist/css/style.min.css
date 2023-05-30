@@ -1954,7 +1954,7 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-style: normal;
 }
-.burger:before, .burger:after, .theme::before, .theme::after, .phone__link:after, .form-preloader, .form-preloader:before {
+.burger:before, .burger:after, .place__address::before, .theme::before, .theme::after, .phone__link:after, .form-preloader, .form-preloader:before {
   position: absolute;
   content: "";
 }
@@ -1970,7 +1970,7 @@ body {
   letter-spacing: 0.02em;
   color: #FBFBFB;
   scroll-behavior: smooth;
-  background: #BE300C;
+  background-color: #282828;
 }
 
 * img {
@@ -2240,7 +2240,20 @@ a:focus {
   }
 }
 .swiper {
-  max-width: 800px;
+  max-width: 900px;
+  margin: 0;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper-button-prev:after,
@@ -2287,13 +2300,13 @@ a:focus {
 }
 
 .swiper-pagination > span {
-  background: #E8C87A;
+  background: #9F3119;
 }
 
 .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  border-radius: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
 }
 
 .card {
@@ -2907,12 +2920,60 @@ a:focus {
   margin: 0 auto;
 }
 
-.main__place {
-  padding: 3em 0;
+.place__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.place {
-  min-height: 10vh;
+.place__block-description {
+  flex: 0 1 40%;
+  padding: 0 3em;
+}
+.place__description-body {
+  max-width: 500px;
+}
+.place__title {
+  text-align: left;
+}
+.place__address {
+  position: relative;
+  padding-left: 20px;
+  text-decoration: underline;
+}
+.place__address::before {
+  bottom: 3px;
+  left: 0;
+  width: 15px;
+  height: 100%;
+  background: url("../assets/images/icon/map.svg") center center no-repeat;
+}
+.place__text {
+  margin-bottom: 2em;
+}
+.place__text > p {
+  margin-bottom: 1em;
+}
+.place__text > p:last-child {
+  margin-bottom: 0;
+}
+.place__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+.place__button {
+  max-width: 380px;
+}
+.place__button-address {
+  max-width: 380px;
+  border: 2px solid #E8C87A;
+  color: #E8C87A;
+  background: none;
+}
+.place__block-slider {
+  flex: 0 1 60%;
 }
 .place__slider-container {
   position: relative;
@@ -3108,6 +3169,7 @@ a:focus {
 
 .main {
   flex: 1 1 auto;
+  background: #BE300C;
 }
 
 .footer {
