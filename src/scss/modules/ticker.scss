@@ -5,12 +5,16 @@
 	position: relative;
 	overflow: hidden;
 	padding: .5em 0;
+	border-top: 2px solid var.$accentColorTwo;
+	border-bottom: 2px solid var.$accentColorTwo;
+	background: rgba(232, 200, 122, 0.1);
 
 	&__wrapper {
 		display: flex;
 	}
 
 	&__item {
+		padding: 0 5px;
 		color: var.$lightColor;
 		font-weight: 700;
 		font-size: 22px;
@@ -18,7 +22,6 @@
 		line-height: 1.3em;
 		white-space: nowrap;
 		flex-shrink: 0;
-		padding: 0 5px;
 	}
 }
 

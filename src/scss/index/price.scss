@@ -8,9 +8,12 @@
 }
 
 .price {
+	background: var.$mainAccentBg url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
 
-	&__title {
-		margin-bottom: 1em;
+	&__ticker {
+		& .ticker__item {
+			animation: ticker 30s linear infinite;
+		}
 	}
 
 	&__wrapper-card {
@@ -27,66 +30,69 @@
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		grid-gap: 50px 70px;
+		grid-gap: 50px;
 		padding-bottom: 6px;
 		transition: transform .5s ease-in;
 	}
 
 	&__card {
-		height: 300px;
-	}
+		display: flex;
+		flex-direction: column;
+		border: 2px solid var.$accentColorTwo;
+		border-radius: var.$borderRadius;
+		background: var.$mainAccentBg;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		transition: transform 1s ease-in-out;
 
-	&__card_steps {
 		@media (any-hover: hover) {
 			&:hover {
-				cursor: auto;
+				transform: scale(1.1);
 			}
 		}
 	}
 
-	&__ticker {
-		border: 1px solid var.$accentColor;
-		background: #fff;
+	&__card-title {
+		padding: .5em;
+		background: var.$accentColor;
 
-		& .ticker__item {
-			color: #000;
-			animation: ticker 30s linear infinite;
+		&>h3 {
+			text-align: center;
+			color: var.$lightColor;
 		}
 	}
-}
 
-.card {
-	&__image-wrapper {
-		height: 100%;
-		width: 100%;
+	&__description {
+		flex: 1 1 auto;
+		padding: 2em 1em 1em;
 	}
 
-	&__image-wrapper_price {
-		padding: 0;
+	&__bottom {
+		padding: 1em;
 	}
 
-	&__title-wrapper_price {
-		padding: 10px;
-	}
+	&__list {
+		margin-left: 20px;
+		list-style: disc;
 
-	&__title-wrapper_price {
-		transform: translateY(71%);
-	}
-
-	&__subtitle_price {
-		margin: 1em 0;
-		@include mix.adaptivFont(14, 10);
-		line-height: 120%;
-	}
-
-	&__title-wrapper_price-list {
-		height: 100%;
-		@include mix.adaptivFont(14, 10);
-		border-radius: 0;
-		transform: translateY(0);
-
-		&::before {
-			display: none;
+		&>li {
+			line-height: 1.6em;
 		}
+	}
+
+	&__label {
+		@include mix.displayFlex(flex, center, center);
+		padding: 1em;
+		border: 2px solid var.$accentColorTwo;
+		border-radius: var.$borderRadius;
+		margin-bottom: 1em;
+
+		&>p {
+			@include mix.adaptivFont(22, 16);
+			line-height: 1.3em;
+		}
+	}
+
+	&__button {
+		max-width: 400px;
 	}
 }

@@ -42,6 +42,20 @@
 		flex: 0 1 33.33%;
 	}
 
+	&__address {
+		position: relative;
+		padding-left: 20px;
+
+		&::before {
+			@extend %pseudoElement;
+			bottom: 3px;
+			left: 0;
+			width: 15px;
+			height: 100%;
+			background: url('../../assets/images/icon/map.svg') center center no-repeat;
+		}
+	}
+
 	&__links {
 		flex: 0 1 33.33%;
 		@include mix.displayFlex(flex, center, center);
