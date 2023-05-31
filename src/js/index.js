@@ -6,6 +6,7 @@ import { pressDawn } from "./modules/_pressDawn.js"
 import { pressUp } from "./modules/_pressUp.js"
 import { scrollHeader } from "./modules/_scrollHeader.js"
 import { swiper } from "./modules/_swiper.js"
+import { speakers } from "./modules/_speakers.js"
 
 try {
 	hello()
@@ -15,6 +16,7 @@ try {
 	swiper()
 	pressDawn()
 	pressUp()
+	speakers()
 	sendForm()
 } catch (error) {
 	console.error(error.message)

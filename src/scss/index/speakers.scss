@@ -6,6 +6,161 @@
 	padding: 3em 0;
 }
 
+.main {
+	&__speakers {}
+}
+
 .speakers {
-	min-height: 10vh;
+	&__title {
+		margin-bottom: 2em;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+		grid-gap: 120px 20px;
+		transition: transform .5s ease-in;
+	}
+
+	&__card-speacker {}
+}
+
+.card-speacker {
+	perspective: 1000px;
+	box-sizing: content-box;
+
+	&__body {
+		box-sizing: border-box;
+		position: relative;
+		width: 380px;
+		// min-height: 550px;
+		height: auto;
+		border: 2px solid #E8C87A;
+		border-radius: var.$borderRadius;
+		transition: transform .6s;
+		transform-style: preserve-3d;
+		background: var.$mainAccentBg;
+
+		&.flipped {
+			transform: rotateY(180deg);
+		}
+	}
+
+	&__front,
+	&__back {
+		box-sizing: border-box;
+		@include mix.displayFlex(flex, flex-start, stretch);
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		padding: 16px;
+		text-align: center;
+		backface-visibility: hidden;
+
+		& h3 {
+			margin: .8em 0;
+			font-family: var.$subFamily;
+			@include mix.adaptivFont(32, 18);
+		}
+
+		& span {
+			font-weight: 700;
+		}
+	}
+
+	&__back {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__front {
+		z-index: 2;
+
+		& h3 {
+			margin: .8em 0 0;
+		}
+	}
+
+	&__image-block {
+		height: 240px;
+	}
+
+	&__image-wrapper {
+		overflow: hidden;
+		transform: translateY(-30%);
+		width: 100%;
+		max-width: 340px;
+		margin: 0 auto;
+		border: 2px solid var.$accentColorTwo;
+		border-radius: 50%;
+
+		&>img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		@include mix.displayFlex(flex, flex-start, stretch);
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	&__competencies {
+		flex: 1 1 auto;
+		@include mix.adaptivFont(14, 10);
+		margin-bottom: 1em;
+	}
+
+	&__buttons {
+		@include mix.displayFlex(flex, center, center);
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	&__theme,
+	&__slogan {
+		padding: 0.5em;
+		border: 2px solid var.$accentColorTwo;
+		border-radius: var.$borderRadius;
+	}
+
+	&__button {
+		max-width: 340px;
+	}
+
+	&__back {
+		overflow: hidden;
+		transform: rotateY(180deg);
+	}
+
+	&__bio {
+		overflow: auto;
+		height: 70%;
+		text-align: left;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__list {
+		list-style: disc;
+		padding-left: 20px;
+		line-height: 1.3em;
+
+		&>li {
+			margin-bottom: 1em;
+		}
+	}
+
+	&__slogan {
+		width: 100%;
+		margin-top: 10px;
+		text-align: left;
+	}
 }
