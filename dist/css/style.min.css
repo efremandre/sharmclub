@@ -2048,7 +2048,7 @@ a:focus {
 }
 
 .main-title {
-  font-size: calc(50px + 30 * ((100vw - 320px) / 1200));
+  font-size: calc(32px + 48 * ((100vw - 320px) / 1200));
   color: #FBFBFB;
   font-weight: 700;
   line-height: 1.3em;
@@ -2065,27 +2065,13 @@ a:focus {
   }
 }
 
-@keyframes shineSVG {
-  0% {
-    fill: rgb(240, 209, 123);
-    box-shadow: 0px 0px 60px rgba(240, 209, 123, 0.7);
-  }
-  50% {
-    fill: rgba(240, 209, 123, 0);
-    box-shadow: 0px 0px 60px rgba(240, 209, 123, 0);
-  }
-  100% {
-    fill: rgb(240, 209, 123);
-    box-shadow: 0px 0px 60px rgba(240, 209, 123, 0.7);
-  }
-}
 .shine {
   animation: shine 4s infinite;
 }
 
 @keyframes shine {
   0% {
-    box-shadow: 0px 0px 60px rgba(240, 209, 123, 0.7);
+    box-shadow: 0 0 60px rgba(240, 209, 123, 0.7);
   }
   50% {
     box-shadow: 0px 0px 60px rgba(240, 209, 123, 0);
@@ -2696,11 +2682,13 @@ a:focus {
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .fullscreen__date, .fullscreen__address {
   position: relative;
   padding-left: 10px;
   font-weight: 700;
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1200));
   letter-spacing: 0.8px;
   text-transform: uppercase;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
@@ -2731,7 +2719,7 @@ a:focus {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
 .fullscreen__subtitle {
-  font-size: calc(16px + 4 * ((100vw - 320px) / 1200));
+  font-size: calc(14px + 6 * ((100vw - 320px) / 1200));
   margin-bottom: 2em;
   color: #FFFFFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
@@ -2742,11 +2730,13 @@ a:focus {
   align-items: center;
   gap: 40px;
   width: 100%;
+  flex-wrap: wrap;
 }
 .fullscreen__button {
   box-sizing: border-box;
 }
 .fullscreen__button-backcall {
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1200));
   text-decoration-line: underline;
   text-transform: uppercase;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
@@ -2759,7 +2749,7 @@ a:focus {
 .fullscreen__ticker {
   position: absolute;
   left: 0;
-  bottom: 70px;
+  bottom: 7%;
   width: 100%;
 }
 .fullscreen__ticker .ticker__item {
