@@ -1,7 +1,8 @@
 import { aos } from "./modules/_aos.js"
+import { askBtn } from "./modules/_askBtn.js"
 import { burger } from './modules/_burger.js'
-import { sendForm } from "./modules/_form.js"
 import { changeBgScroll } from "./modules/_changeBgScroll.js"
+import { sendForm } from "./modules/_form.js"
 import { hello } from './modules/_hello.js'
 import { pressDawn } from "./modules/_pressDawn.js"
 import { pressUp } from "./modules/_pressUp.js"
@@ -22,6 +23,7 @@ try {
 	speakers()
 	sendForm()
 	changeBgScroll()
+	askBtn()
 } catch (error) {
 	console.error(error.message)
 }

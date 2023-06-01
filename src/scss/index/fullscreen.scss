@@ -40,7 +40,7 @@
 		@include mix.adaptivFont(16, 10);
 		letter-spacing: 0.8px;
 		text-transform: uppercase;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+		text-shadow: 0 0 26px rgba(0, 0, 0, 0.8);
 
 		&::before {
 			position: absolute;
@@ -70,14 +70,15 @@
 
 	&__main-title {
 		margin-bottom: 0.3em;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+		text-shadow: 0 0 26px rgba(0, 0, 0, 0.8);
+		font-family: 'Fira Sans', sans-serif;
 	}
 
 	&__subtitle {
 		@include mix.adaptivFont(20, 14);
 		margin-bottom: 2em;
-		color: #FFFFFF;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+		color: var.$lightColor;
+		text-shadow: 0 0 26px rgba(0, 0, 0, 0.8);
 	}
 
 	&__buttons {
@@ -95,7 +96,7 @@
 		@include mix.adaptivFont(16, 10);
 		text-decoration-line: underline;
 		text-transform: uppercase;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+		text-shadow: 0 0 26px rgba(0, 0, 0, 0.8);
 
 		@media (any-hover: hover) {
 			&:hover {
