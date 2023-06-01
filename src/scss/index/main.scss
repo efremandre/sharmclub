@@ -16,4 +16,15 @@
 	flex: 1 1 auto;
 	background: var.$mainBg;
 	transition: background-color 1000ms;
+
+	&__about-forum,
+	&__speakers,
+	&__auction,
+	&__theme,
+	&__price,
+	&__organizers,
+	&__partners,
+	&__contact {
+		padding: 3em 0;
+	}
 }

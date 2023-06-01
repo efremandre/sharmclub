@@ -3,12 +3,7 @@
 @use '../base/extentsions';
 @use '../modules/button-dawn';
 
-.main__price {
-	padding: 3em 0;
-}
-
 .price {
-	// var.$mainAccentBg
 	background: url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
 
 	&__ticker {

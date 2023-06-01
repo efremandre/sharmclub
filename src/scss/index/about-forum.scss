@@ -3,12 +3,7 @@
 @use '../base/extentsions';
 @use '../modules/button-dawn';
 
-.main__about-forum {
-	padding: 3em 0;
-}
-
 .about-forum {
-
 	@media screen and (min-width: 769.98px) {
 		background: url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
 	}

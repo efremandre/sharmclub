@@ -3,23 +3,11 @@
 @use '../base/extentsions';
 @use '../modules/button-dawn';
 
-.main__contact {
-	padding: 3em 0;
-	// background: radial-gradient(83.23% 110.53% at 50% 50%,
-	// 		rgba(147, 128, 106, 0.36) 2.6%,
-	// 		rgba(182, 135, 78, 0.36) 63.7%,
-	// 		rgba(104, 77, 50, 0.36) 87.23%,
-	// 		rgba(210, 181, 107, 0.36) 100%),
-	// 	linear-gradient(88.64deg, #CFA453 -9.77%, #B9903D -7.91%, #BD9C4E 19.9%, #D0B769 42.04%, #E2D197 59.66%, #E6E3C0 78.08%, #DACD83 99.52%, #D2BB74 106.61%);
-	// box-shadow: inset 0px 4px 24px rgba(255, 230, 97, 0.25);
-
-	background: linear-gradient(88.64deg, rgba(207, 164, 83, 0.3) -9.77%, rgba(185, 144, 61, 0.3) -7.91%, rgba(189, 156, 78, 0.3) 19.9%, rgba(208, 183, 105, 0.3) 42.04%, rgba(226, 209, 151, 0.3) 59.66%, rgba(230, 227, 192, 0.3) 78.08%, rgba(218, 205, 131, 0.3) 99.52%, rgba(210, 187, 116, 0.3) 106.61%);
-}
-
 .contact {
 	@include mix.displayFlex(flex, center, center);
 	min-height: 80vh;
 	color: var.$lightColor;
+	background: linear-gradient(88.64deg, rgba(207, 164, 83, 0.3) -9.77%, rgba(185, 144, 61, 0.3) -7.91%, rgba(189, 156, 78, 0.3) 19.9%, rgba(208, 183, 105, 0.3) 42.04%, rgba(226, 209, 151, 0.3) 59.66%, rgba(230, 227, 192, 0.3) 78.08%, rgba(218, 205, 131, 0.3) 99.52%, rgba(210, 187, 116, 0.3) 106.61%);
 
 	&__wrapper {
 		@include mix.displayFlex(flex, center, center);

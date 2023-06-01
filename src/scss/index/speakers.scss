@@ -2,10 +2,6 @@
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
 
-.main__speakers {
-	padding: 3em 0;
-}
-
 .speakers {
 	position: relative;
 	overflow: hidden;

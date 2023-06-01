@@ -2,14 +2,8 @@
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
 
-.main__theme {
-	padding: 3em 0;
-}
-
 .theme {
 	position: relative;
-	// background: var.$mainAccentBg;
-	transition: background-color 1000ms;
 
 	&::before,
 	&::after {
