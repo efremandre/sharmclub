@@ -39,7 +39,8 @@
 		flex: 1 1 auto;
 		box-sizing: border-box;
 		position: relative;
-		max-width: 370px;
+		// max-width: 370px;
+		width: 100%;
 		border: 2px solid var.$accentColorTwo;
 		border-radius: var.$borderRadius;
 		transition: transform .6s;

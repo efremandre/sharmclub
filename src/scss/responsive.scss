@@ -2,7 +2,19 @@
 @use './base/mixin' as mix;
 @use './base/extentsions';
 
-@media screen and (min-width: 1200px) {}
+@media (max-width: 1200px) and (min-width: 986.98px) {
+	.card-speacker {
+		&__image-block {
+			height: 210px;
+		}
+
+		&__name {
+			&>h3 {
+				margin: 0;
+			}
+		}
+	}
+}
 
 @media screen and (max-width: 989.98px) {
 
@@ -15,9 +27,14 @@
 	}
 
 	.main {
-
 		&__contact {
 			padding: 2em 0;
+		}
+	}
+
+	.card-speacker {
+		&__image-block {
+			height: 240px;
 		}
 	}
 
@@ -79,6 +96,20 @@
 			height: 300px;
 		}
 	}
+
+	.card-speacker {
+		&__image-block {
+			height: 210px;
+		}
+
+		&__image-wrapper {
+			max-width: 300px;
+		}
+
+		&__content {
+			gap: 10px;
+		}
+	}
 }
 
 @media screen and (max-width: 569.98px) {
@@ -97,13 +128,13 @@
 		}
 	}
 
-	.card {
-		&__title-wrapper_services {
-			transform: translateY(73%);
+	.auction {
+		&__wrapper {
+			padding: 1em;
 		}
 
-		&__title-wrapper_services-list {
-			transform: translateY(0);
+		&__description {
+			padding: 0;
 		}
 	}
 
