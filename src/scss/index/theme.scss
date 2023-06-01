@@ -8,7 +8,8 @@
 
 .theme {
 	position: relative;
-	background: var.$mainAccentBg;
+	// background: var.$mainAccentBg;
+	transition: background-color 1000ms;
 
 	&::before,
 	&::after {

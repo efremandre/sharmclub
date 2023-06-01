@@ -6,43 +6,52 @@
 	padding: 3em 0;
 }
 
-.main {
-	&__speakers {}
-}
-
 .speakers {
+	position: relative;
+	overflow: hidden;
+
 	&__title {
 		margin-bottom: 2em;
+		position: relative;
+		z-index: 2;
 	}
 
 	&__grid {
+		width: 100%;
+		position: relative;
+		z-index: 2;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 120px 20px;
 		transition: transform .5s ease-in;
 	}
-
-	&__card-speacker {}
 }
 
 .card-speacker {
+	@include mix.displayFlex(flex, flex-start, stretch);
 	perspective: 1000px;
 	box-sizing: content-box;
+	border-radius: var.$borderRadius;
+	background: rgba(130, 51, 34, .2);
+
 
 	&__body {
+		flex: 1 1 auto;
 		box-sizing: border-box;
 		position: relative;
-		width: 380px;
-		// min-height: 550px;
-		height: auto;
-		border: 2px solid #E8C87A;
+		max-width: 370px;
+		border: 2px solid var.$accentColorTwo;
 		border-radius: var.$borderRadius;
 		transition: transform .6s;
 		transform-style: preserve-3d;
-		background: var.$mainAccentBg;
 
 		&.flipped {
 			transform: rotateY(180deg);
+
+			.card-speacker__image-wrapper {
+				transform: translateY(0);
+				transition: transform .6s ease;
+			}
 		}
 	}
 
@@ -56,10 +65,13 @@
 		padding: 16px;
 		text-align: center;
 		backface-visibility: hidden;
+		border-radius: var.$borderRadius;
+		background: var.$mainAccentBg;
 
 		& h3 {
 			margin: .8em 0;
 			font-family: var.$subFamily;
+			line-height: 1.3em;
 			@include mix.adaptivFont(32, 18);
 		}
 
@@ -94,6 +106,7 @@
 		margin: 0 auto;
 		border: 2px solid var.$accentColorTwo;
 		border-radius: 50%;
+		transition: transform .7s ease;
 
 		&>img {
 			display: block;
@@ -124,13 +137,14 @@
 
 	&__theme,
 	&__slogan {
+		width: 100%;
 		padding: 0.5em;
 		border: 2px solid var.$accentColorTwo;
 		border-radius: var.$borderRadius;
 	}
 
 	&__button {
-		max-width: 340px;
+		max-width: 100%;
 	}
 
 	&__back {
@@ -162,5 +176,100 @@
 		width: 100%;
 		margin-top: 10px;
 		text-align: left;
+	}
+}
+
+// анимация фона
+.light {
+	position: absolute;
+	z-index: 1;
+	margin: auto;
+	width: 0;
+	top: 20vh;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	opacity: 1;
+	background-color: var.$accentColorTwo;
+	box-shadow: var.$accentColorTwo 0px 0px 16px 2px;
+}
+
+.x1 {
+	animation: floatUp 8s infinite linear;
+	transform: scale(1.0);
+}
+
+.x2 {
+
+	animation: floatUp 7s infinite linear;
+	transform: scale(1.6);
+	left: 15%;
+}
+
+.x3 {
+	animation: floatUp 2.5s infinite linear;
+	transform: scale(.5);
+	left: -15%;
+}
+
+.x4 {
+	animation: floatUp 4.5s infinite linear;
+	transform: scale(1.2);
+	left: -34%;
+}
+
+.x5 {
+	animation: floatUp 8s infinite linear;
+	transform: scale(2.2);
+	left: -57%;
+}
+
+.x6 {
+	animation: floatUp 3s infinite linear;
+	transform: scale(.8);
+	left: -81%;
+}
+
+.x7 {
+	animation: floatUp 5.3s infinite linear;
+	transform: scale(3.2);
+	left: 37%;
+}
+
+.x8 {
+	animation: floatUp 4.7s infinite linear;
+	transform: scale(1.7);
+	left: 62%;
+}
+
+.x9 {
+	animation: floatUp 4.1s infinite linear;
+	transform: scale(0.9);
+	left: 85%;
+}
+
+
+@keyframes floatUp {
+	0% {
+		top: 100vh;
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1;
+	}
+
+	50% {
+		top: 0vh;
+		opacity: .8;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	100% {
+		top: -100vh;
+		opacity: 0;
 	}
 }

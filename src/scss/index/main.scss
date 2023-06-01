@@ -15,4 +15,5 @@
 .main {
 	flex: 1 1 auto;
 	background: var.$mainBg;
+	transition: background-color 1000ms;
 }

@@ -8,7 +8,8 @@
 }
 
 .price {
-	background: var.$mainAccentBg url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
+	// var.$mainAccentBg
+	background: url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
 
 	&__ticker {
 		& .ticker__item {
@@ -31,8 +32,6 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 50px;
-		padding-bottom: 6px;
-		transition: transform .5s ease-in;
 	}
 
 	&__card {
@@ -41,12 +40,12 @@
 		border: 2px solid var.$accentColorTwo;
 		border-radius: var.$borderRadius;
 		background: var.$mainAccentBg;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		transition: transform 1s ease-in-out;
+		box-shadow: 0px 4px 12px rgba(0, 0, 0, .4);
+		transition: box-shadow 1s ease;
 
 		@media (any-hover: hover) {
 			&:hover {
-				transform: scale(1.1);
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
 			}
 		}
 	}

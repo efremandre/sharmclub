@@ -37,7 +37,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="assets/images/favicons/apple-touch-icon-1024x1024.png">
     <link href="css/style.min.css" rel="stylesheet">
-    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=11ca6600-7aa0-4c15-a172-c3bfaf3bd3e9"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script defer src="js/index.min.js"></script>
     <title>Шарм Медиа Клуб | Марина Шарм</title>
 </head>
@@ -46,7 +47,7 @@
     <div class="wrapper">
         <header class="header">
             <div data-header class="header__navigation navigation">
-                <div class="navigation__top-row">
+                <div class="navigation__top-row" data-aos="fade-down">
                     <div class="container">
                         <div class="navigation__wrapper">
                             <div class="navigation__block">
@@ -85,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="navigation__bottom-row">
+                <div class="navigation__bottom-row" data-aos="fade-down">
                     <div class="container">
                         <div class="navigation__wrapper">
                             <div class="navigation__logo logo">
@@ -103,24 +104,27 @@
             </div>
         </header>
         <main class="main">
-            <section class="main__fullscreen fullscreen">
+            <section class="main__fullscreen fullscreen changecolor">
                 <div class="container">
-                    <div class="fullscreen__wrapper">
+                    <div class="fullscreen__wrapper" data-aos="fade-right" data-aos-delay="1000">
                         <div class="fullscreen__info">
                             <div class="fullscreen__logopark">
                                 <a href="https://www.radissonhotels.com/ru-ru/hotels/park-inn-conference-st-petersburg-pulkovskaya/meeting-events?cid=a%3Ase%20b%3Agmb%20c%3Aemea%20i%3Alocal%20e%3Apii%20d%3Aeerut%20h%3ARULEDPUL" target="_blank" rel="noopener noreferrer">
-                                    <img src="./assets/images/hero/parklogo.svg" alt="Park Inn" title="Место проевдения Всероссийского женского бизнес форума">
+                                    <img class="shine" src="./assets/images/hero/parklogo.svg" alt="Park Inn" title="Место проевдения Всероссийского женского бизнес форума">
                                 </a>
                             </div>
-                            <a href="https://www.google.com/maps/place/Park+Inn+by+Radisson+Pulkovskaya/@59.8442227,30.3137002,16z/	data=!4m9!3m8!1s0x4696311c96c86847:0xc3775861a2071276!5m2!4m1!1i2!8m2!3d59.8425633!4d30.3186681!16s%2Fm%2F0g59mpd?entry=ttu" title="Адрес места проевдения Всероссийского женского бизнес форума" target="_blank" class="fullscreen__address">Площадь победы 1, Санкт-Петербург</a>
+                            <a href="https://www.google.com/maps/place/Park+Inn+by+Radisson+Pulkovskaya/@59.8442227,30.3137002,16z/	data=!4m9!3m8!1s0x4696311c96c86847:0xc3775861a2071276!5m2!4m1!1i2!8m2!3d59.8425633!4d30.3186681!16s%2Fm%2F0g59mpd?entry=ttu" title="Адрес места проевдения Всероссийского женского бизнес форума" target="_blank" class="fullscreen__address">Площадь победы 1,
+                                Санкт-Петербург</a>
                             <p class="fullscreen__date" title="Дата проведения Всероссийского женского бизнес форума">
                                 <time datetime="2023-06-18">18 июня 2023</time>
                             </p>
                         </div>
-                        <h1 class="fullscreen__main-title main-title">Всероссийский<br>женский бизнес форум</h1>
-                        <p class="fullscreen__subtitle">Первый шаг на пути к большому мировому движению Лидеров-Женщин, <br>которые
+                        <h1 class="fullscreen__main-title main-title" data-aos="zoom-out-right">Всероссийский<br>женский бизнес форум</h1>
+                        <p class="fullscreen__subtitle" data-aos="fade-right" data-aos-delay="1200">Первый шаг на пути
+                            к большому мировому движению
+                            Лидеров-Женщин, <br>которые
                             СОЗДАЮТ, и готовы менять мироустройство и миропорядок на нашей планете на благо всего человечества.</p>
-                        <div class="fullscreen__buttons">
+                        <div class="fullscreen__buttons" data-aos="fade-right" data-aos-delay="1800">
                             <a title="Купить билет" href="#price" class="fullscreen__button button">Принять участие</a>
                             <a title="Получить обратную связь" href="#contact" class="fullscreen__button-backcall">задать вопрос или
                                 предложить тему</a>
@@ -145,11 +149,11 @@
                     <button class="button-dawn__btn" tabindex="-1"></button>
                 </div>
             </section>
-            <section id="aboutForum" class="main__about-forum about-forum">
+            <section id="aboutForum" class="main__about-forum about-forum" data-name="section-1" data-bg="#821f09">
                 <div class="container">
-                    <h2 class="about-forum__title subtitle">О форуме</h2>
+                    <h2 class="about-forum__title subtitle" data-aos="fade-right">О форуме</h2>
                     <div class="about-forum__row">
-                        <div class="about-forum__content">
+                        <div class="about-forum__content" data-aos="fade-up-left">
                             <div class="about-forum__text">
                                 <p>Всероссийский Женский Бизнес Форум —
                                     это первый шаг на пути к большому мировому движению Лидеров-Женщин.</p>
@@ -162,15 +166,15 @@
                                     инфраструктуры.</p>
                             </div>
                         </div>
-                        <div class="about-forum__image-wrapper">
-                            <img src="./assets/images/about-forum/image2.jpg" loading="lazy" width="600" alt="Фото с форумов">
+                        <div class="about-forum__image-wrapper" data-aos="zoom-in">
+                            <img class="hoverEffect" src="./assets/images/about-forum/image2.jpg" loading="lazy" width="600" alt="Фото с форумов">
                         </div>
                     </div>
                     <div class="about-forum__row">
-                        <div class="about-forum__image-wrapper about-forum__image-wrapper_center">
-                            <img src="./assets/images/about-forum/image1.jpg" loading="lazy" width="600" alt="Фото с форумов">
+                        <div class="about-forum__image-wrapper" data-aos="zoom-in">
+                            <img class="hoverEffect" src="./assets/images/about-forum/image1.jpg" loading="lazy" width="600" alt="Фото с форумов">
                         </div>
-                        <div class="about-forum__content">
+                        <div class="about-forum__content" data-aos="fade-up-right">
                             <div class="about-forum__text">
                                 <p>Для всех женщин Мира — это подготовительный этап к переходу на единое взаимодействие и новые правила
                                     миропорядка, задача которого:</p>
@@ -188,7 +192,7 @@
                         </div>
                     </div>
                     <div class="about-forum__row">
-                        <div class="about-forum__content">
+                        <div class="about-forum__content" data-aos="fade-up-left">
                             <div class="about-forum__text">
                                 <p>Каждый новый форум будет освещать ваши достижения с самого начала и на всём пути развития.</p>
 
@@ -206,268 +210,48 @@
                                     Вперед!</p>
                             </div>
                         </div>
-                        <div class="about-forum__image-wrapper">
+                        <div class="about-forum__image-wrapper" data-aos="zoom-in">
                             <img src="./assets/images/about-forum/image3.jpg" loading="lazy" width="600" alt="Фото с форумов">
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="speakers" class="main__speakers speakers">
+            <section id="speakers" class="main__speakers speakers" data-name="section-2" data-bg="#BE300C">
                 <div class="container">
-                    <h2 class="speakers__title subtitle">Спикеры форума</h2>
+                    <h2 class="speakers__title subtitle" data-aos="fade-up">Спикеры форума</h2>
                     <div class="speakers__grid">
-                        <div class="speakers__card-speacker card-speacker">
-                            <div class="card-speacker__body">
-                                <div class="card-speacker__front">
-                                    <div class="card-speacker__image-block">
-                                        <div class="card-speacker__image-wrapper"><img src="./assets/images/speakers/sharm.jpg" alt="Мария Шарм"></div>
-                                    </div>
-                                    <div class="card-speacker__content">
-                                        <div class="card-speacker__name">
-                                            <h3>Марина Шарм</h3>
-                                        </div>
-
-                                        <div class="card-speacker__competencies">
-                                            <p>Главный организатор Ежегодного Всероссийского форума "Женщина в бизнесе"</p>
-                                        </div>
-
-                                        <div class="card-speacker__buttons">
-                                            <div class="card-speacker__theme">
-                                                <p><span>Тема выступления:</span><br>Возможности женщины в бизнесе безграничны</p>
-                                            </div>
-                                            <button value="open" class="card-speacker__button button">Подробнее о спикере</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-speacker__back">
-                                    <div class="card-speacker__name">
-                                        <h3>Марина Шарм</h3>
-                                    </div>
-
-                                    <div class="card-speacker__bio">
-                                        <ul class="card-speacker__list">
-                                            <li>Организовала с нуля, вывела на высокий уровень доходности несколько направлений бизнеса, среди
-                                                которых
-                                                патентное бюро (Москва),
-                                                журнал «Персоны двух столиц», издательский дом, Инвест Фонд, агентство недвижимости, сеть массажных
-                                                салонов «Седьмое небо» (Санкт-Петербург), пасека Орловская область, производство мяса для собак и др.
-                                            </li>
-                                            <li>
-                                                Является автором бизнес- тренингов:
-                                                <ul>
-                                                    <li>«Лестница успеха»;</li>
-                                                    <li>«Деньги - это не игра, деньги - это серьезно»;</li>
-                                                    <li>«Возможности безграничны».</li>
-                                                </ul>
-                                            </li>
-                                            <li>Выступает инвестором проектов российских предпринимателей</li>
-                                            <li>Основатель Благотворительного Фонда «Благословите женщину»</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="card-speacker__buttons">
-                                        <div class="card-speacker__slogan">
-                                            <p><span>Девиз:</span> Возможности женщины безграничны</p>
-                                        </div>
-                                        <button value="close" class="card-speacker__button button">Закрыть</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="speakers__card-speacker card-speacker">
-                            <div class="card-speacker__body">
-                                <div class="card-speacker__front">
-                                    <div class="card-speacker__image-block">
-                                        <div class="card-speacker__image-wrapper"><img src="./assets/images/speakers/sharm.jpg" alt="Мария Шарм"></div>
-                                    </div>
-                                    <div class="card-speacker__content">
-                                        <div class="card-speacker__name">
-                                            <h3>Марина Шарм</h3>
-                                        </div>
-
-                                        <div class="card-speacker__competencies">
-                                            <p>Главный организатор Ежегодного Всероссийского форума "Женщина в бизнесе"</p>
-                                        </div>
-
-                                        <div class="card-speacker__buttons">
-                                            <div class="card-speacker__theme">
-                                                <p><span>Тема выступления:</span><br>Возможности женщины в бизнесе безграничны</p>
-                                            </div>
-                                            <button value="open" class="card-speacker__button button">Подробнее о спикере</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-speacker__back">
-                                    <div class="card-speacker__name">
-                                        <h3>Марина Шарм</h3>
-                                    </div>
-
-                                    <div class="card-speacker__bio">
-                                        <ul class="card-speacker__list">
-                                            <li>Организовала с нуля, вывела на высокий уровень доходности несколько направлений бизнеса, среди
-                                                которых
-                                                патентное бюро (Москва),
-                                                журнал «Персоны двух столиц», издательский дом, Инвест Фонд, агентство недвижимости, сеть массажных
-                                                салонов «Седьмое небо» (Санкт-Петербург), пасека Орловская область, производство мяса для собак и др.
-                                            </li>
-                                            <li>
-                                                Является автором бизнес- тренингов:
-                                                <ul>
-                                                    <li>«Лестница успеха»;</li>
-                                                    <li>«Деньги - это не игра, деньги - это серьезно»;</li>
-                                                    <li>«Возможности безграничны».</li>
-                                                </ul>
-                                            </li>
-                                            <li>Выступает инвестором проектов российских предпринимателей</li>
-                                            <li>Основатель Благотворительного Фонда «Благословите женщину»</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="card-speacker__buttons">
-                                        <div class="card-speacker__slogan">
-                                            <p><span>Девиз:</span> Возможности женщины безграничны</p>
-                                        </div>
-                                        <button value="close" class="card-speacker__button button">Закрыть</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="speakers__card-speacker card-speacker">
-                            <div class="card-speacker__body">
-                                <div class="card-speacker__front">
-                                    <div class="card-speacker__image-block">
-                                        <div class="card-speacker__image-wrapper"><img src="./assets/images/speakers/sharm.jpg" alt="Мария Шарм"></div>
-                                    </div>
-                                    <div class="card-speacker__content">
-                                        <div class="card-speacker__name">
-                                            <h3>Марина Шарм</h3>
-                                        </div>
-
-                                        <div class="card-speacker__competencies">
-                                            <p>Главный организатор Ежегодного Всероссийского форума "Женщина в бизнесе"</p>
-                                        </div>
-
-                                        <div class="card-speacker__buttons">
-                                            <div class="card-speacker__theme">
-                                                <p><span>Тема выступления:</span><br>Возможности женщины в бизнесе безграничны</p>
-                                            </div>
-                                            <button value="open" class="card-speacker__button button">Подробнее о спикере</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-speacker__back">
-                                    <div class="card-speacker__name">
-                                        <h3>Марина Шарм</h3>
-                                    </div>
-
-                                    <div class="card-speacker__bio">
-                                        <ul class="card-speacker__list">
-                                            <li>Организовала с нуля, вывела на высокий уровень доходности несколько направлений бизнеса, среди
-                                                которых
-                                                патентное бюро (Москва),
-                                                журнал «Персоны двух столиц», издательский дом, Инвест Фонд, агентство недвижимости, сеть массажных
-                                                салонов «Седьмое небо» (Санкт-Петербург), пасека Орловская область, производство мяса для собак и др.
-                                            </li>
-                                            <li>
-                                                Является автором бизнес- тренингов:
-                                                <ul>
-                                                    <li>«Лестница успеха»;</li>
-                                                    <li>«Деньги - это не игра, деньги - это серьезно»;</li>
-                                                    <li>«Возможности безграничны».</li>
-                                                </ul>
-                                            </li>
-                                            <li>Выступает инвестором проектов российских предпринимателей</li>
-                                            <li>Основатель Благотворительного Фонда «Благословите женщину»</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="card-speacker__buttons">
-                                        <div class="card-speacker__slogan">
-                                            <p><span>Девиз:</span> Возможности женщины безграничны</p>
-                                        </div>
-                                        <button value="close" class="card-speacker__button button">Закрыть</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="speakers__card-speacker card-speacker">
-                            <div class="card-speacker__body">
-                                <div class="card-speacker__front">
-                                    <div class="card-speacker__image-block">
-                                        <div class="card-speacker__image-wrapper"><img src="./assets/images/speakers/sharm.jpg" alt="Мария Шарм"></div>
-                                    </div>
-                                    <div class="card-speacker__content">
-                                        <div class="card-speacker__name">
-                                            <h3>Марина Шарм</h3>
-                                        </div>
-
-                                        <div class="card-speacker__competencies">
-                                            <p>Главный организатор Ежегодного Всероссийского форума "Женщина в бизнесе"</p>
-                                        </div>
-
-                                        <div class="card-speacker__buttons">
-                                            <div class="card-speacker__theme">
-                                                <p><span>Тема выступления:</span><br>Возможности женщины в бизнесе безграничны</p>
-                                            </div>
-                                            <button value="open" class="card-speacker__button button">Подробнее о спикере</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-speacker__back">
-                                    <div class="card-speacker__name">
-                                        <h3>Марина Шарм</h3>
-                                    </div>
-
-                                    <div class="card-speacker__bio">
-                                        <ul class="card-speacker__list">
-                                            <li>Организовала с нуля, вывела на высокий уровень доходности несколько направлений бизнеса, среди
-                                                которых
-                                                патентное бюро (Москва),
-                                                журнал «Персоны двух столиц», издательский дом, Инвест Фонд, агентство недвижимости, сеть массажных
-                                                салонов «Седьмое небо» (Санкт-Петербург), пасека Орловская область, производство мяса для собак и др.
-                                            </li>
-                                            <li>
-                                                Является автором бизнес- тренингов:
-                                                <ul>
-                                                    <li>«Лестница успеха»;</li>
-                                                    <li>«Деньги - это не игра, деньги - это серьезно»;</li>
-                                                    <li>«Возможности безграничны».</li>
-                                                </ul>
-                                            </li>
-                                            <li>Выступает инвестором проектов российских предпринимателей</li>
-                                            <li>Основатель Благотворительного Фонда «Благословите женщину»</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="card-speacker__buttons">
-                                        <div class="card-speacker__slogan">
-                                            <p><span>Девиз:</span> Возможности женщины безграничны</p>
-                                        </div>
-                                        <button value="close" class="card-speacker__button button">Закрыть</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Карточки спикеров -->
                     </div>
                 </div>
+
+                <!-- Для аниации -->
+                <div class='light x1'></div>
+                <div class='light x2'></div>
+                <div class='light x3'></div>
+                <div class='light x4'></div>
+                <div class='light x5'></div>
+                <div class='light x6'></div>
+                <div class='light x7'></div>
+                <div class='light x8'></div>
+                <div class='light x9'></div>
             </section>
-            <section id="theme" class="main__theme theme">
+            <section id="theme" class="main__theme theme" data-name="changecolor" data-bg="#821f09">
                 <div class="container">
-                    <h2 class="theme__title subtitle">Темы форума</h2>
+                    <h2 class="theme__title subtitle" data-aos="fade-up">Темы форума</h2>
                     <div class="theme__wrapper">
-                        <div class="theme__card">
+                        <div class="theme__card" data-aos="zoom-in">
                             <div class="theme__number"><span>1</span></div>
                             <div class="theme__card-title">
                                 <h3>Женщина в бизнесе на локальном институциональном и мировом уровне</h3>
                             </div>
                         </div>
-                        <div class="theme__card">
+                        <div class="theme__card" data-aos="zoom-in">
                             <div class="theme__number"><span>2</span></div>
                             <div class="theme__card-title">
                                 <h3>Что может женщина в бизнесе 21 века</h3>
                             </div>
                         </div>
-                        <div class="theme__card">
+                        <div class="theme__card" data-aos="zoom-in">
                             <div class="theme__number">
                                 <span>3</span>
                             </div>
@@ -475,7 +259,7 @@
                                 <h3>Помощь миру от женщин 21 века с их возможностями и профессионализмом</h3>
                             </div>
                         </div>
-                        <div class="theme__card">
+                        <div class="theme__card" data-aos="fade-up">
                             <div class="theme__card-title">
                                 <h3>В рамках форума будет организована ЭКСПО-ЗОНА</h3>
                             </div>
@@ -486,10 +270,10 @@
                     </div>
                 </div>
             </section>
-            <section id="auction" class="main__auction auction">
+            <section id="auction" class="main__auction auction" data-name="section-3" data-bg="#BE300C">
                 <div class="container">
-                    <h2 class="auction__title subtitle">Благотворотиельный аукцион</h2>
-                    <div class="auction__wrapper">
+                    <h2 class="auction__title subtitle" data-aos="fade-up">Благотворотиельный аукцион</h2>
+                    <div class="auction__wrapper shine" data-aos="zoom-in">
                         <div class="auction__image-wrapper"><img src="./assets/images/about-forum/image1.jpg" alt="Благотворотиельный аукцион"></div>
                         <div class="auction__description">
                             <p>В рамках Всероссийского форума "Женщина в бизнесе" — впервые состоится благотворительный аукцион в поддержку
@@ -502,9 +286,9 @@
                     </div>
                 </div>
             </section>
-            <section id="place" class="main__place place">
+            <section id="place" class="main__place place" data-name="section-4" data-bg="#821f09">
                 <div class="place__wrapper">
-                    <div class="place__block-description">
+                    <div class="place__block-description" data-aos="fade-up-right">
                         <h2 class="place__title subtitle">Место встречи</h2>
                         <div class="place__description-body">
                             <div class="place__text">
@@ -527,30 +311,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="place__block-slider">
+                    <div class="place__block-slider" data-aos="flip-right">
                         <div class="place__slider-container">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/place/cngress-hall-photo1.jpg" alt="Congress Hall фото">
+                                        <img class="hoverEffect" src="./assets/images/place/cngress-hall-photo1.jpg" alt="Congress Hall фото">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/place/cngress-hall-photo2.jpg" alt="Congress Hall фото">
+                                        <img class="hoverEffect" src="./assets/images/place/cngress-hall-photo2.jpg" alt="Congress Hall фото">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/place/cngress-hall-photo3.jpg" alt="Congress Hall фото">
+                                        <img class="hoverEffect" src="./assets/images/place/cngress-hall-photo3.jpg" alt="Congress Hall фото">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/place/cngress-hall-photo4.jpg" alt="Congress Hall фото">
+                                        <img class="hoverEffect" src="./assets/images/place/cngress-hall-photo4.jpg" alt="Congress Hall фото">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/place/cngress-hall-photo5.jpg" alt="Congress Hall фото">
+                                        <img class="hoverEffect" src="./assets/images/place/cngress-hall-photo5.jpg" alt="Congress Hall фото">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/place/cngress-hall-photo6.jpg" alt="Congress Hall фото">
+                                        <img class="hoverEffect" src="./assets/images/place/cngress-hall-photo6.jpg" alt="Congress Hall фото">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/place/cngress-hall-photo7.jpg" alt="Congress Hall фото">
+                                        <img class="hoverEffect" src="./assets/images/place/cngress-hall-photo7.jpg" alt="Congress Hall фото">
                                     </div>
                                 </div>
                                 <div class="swiper-button-next"></div>
@@ -561,8 +345,8 @@
                     </div>
                 </div>
             </section>
-            <section id="price" class="main__price price">
-                <div class="price__ticker ticker">
+            <section id="price" class="main__price price" data-name="section-5" data-bg="#821f09">
+                <div class="price__ticker ticker" data-aos="fade-up">
                     <div class="ticker__wrapper">
                         <div class="ticker__item">Каждому гостю: бутылка воды, блокнот, ручка, рекламные материалы и специальные
                             предложения от спикеров и партнеров ·</div>
@@ -573,10 +357,10 @@
                     </div>
                 </div>
                 <div class="container">
-                    <h2 class="price__title subtitle">Стоимость участия</h2>
+                    <h2 class="price__title subtitle" data-aos="fade-up">Стоимость участия</h2>
                     <div class="price__wrapper-card">
                         <div class="price__grid">
-                            <div class="price__card">
+                            <div class="price__card" data-aos="flip-right">
                                 <div class="price__card-title">
                                     <h3>ТАРИФ «СТАНДАРТ»</h3>
                                 </div>
@@ -596,7 +380,7 @@
                                     <a title="Купить билет на форум" href="#" class="price__button button">Купить билет</a>
                                 </div>
                             </div>
-                            <div class="price__card">
+                            <div class="price__card" data-aos="flip-right" data-aos-delay="500">
                                 <div class="price__card-title">
                                     <h3>ТАРИФ «ПРЕМИУМ»</h3>
                                 </div>
@@ -616,7 +400,7 @@
                                     <a title="Купить билет на форум" href="#" class="price__button button">Купить билет</a>
                                 </div>
                             </div>
-                            <div class="price__card">
+                            <div class="price__card" data-aos="flip-right" data-aos-delay="1000">
                                 <div class="price__card-title">
                                     <h3>ТАРИФ «ГОСТЬ VIP»</h3>
                                 </div>
@@ -638,7 +422,7 @@
                                     <a title="Купить билет на форум" href="#" class="price__button button">Купить билет</a>
                                 </div>
                             </div>
-                            <div class="price__card">
+                            <div class="price__card" data-aos="flip-right">
                                 <div class="price__card-title">
                                     <h3>ТАРИФ «ГОСТЬ VIP +»</h3>
                                 </div>
@@ -663,7 +447,7 @@
                                     <a title="Купить билет на форум" href="#" class="price__button button">Купить билет</a>
                                 </div>
                             </div>
-                            <div class="price__card">
+                            <div class="price__card shine" data-aos="flip-right" data-aos-delay="500">
                                 <div class="price__card-title">
                                     <h3>УЧАСТНИК ЭКСПО-ЗОНЫ</h3>
                                 </div>
@@ -682,7 +466,7 @@
                                     <a title="Купить билет на форум" href="#" class="price__button button">Купить билет</a>
                                 </div>
                             </div>
-                            <div class="price__card">
+                            <div class="price__card shine" data-aos="flip-right" data-aos-delay="1000">
                                 <div class="price__card-title">
                                     <h3>Спикер</h3>
                                 </div>
@@ -706,7 +490,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="price__ticker ticker">
+                <div class="price__ticker ticker" data-aos="fade-up">
                     <div class="ticker__wrapper">
                         <div class="ticker__item">* журналы распространяются в зонах ожидания вокзалов и аэропортов крупных городов
                             России
@@ -724,72 +508,48 @@
                 </div>
             </section>
             <div class="wrapper-bg">
-                <section id="organizers" class="main__organizers organizers">
+                <section id="organizers" class="main__organizers organizers" data-name="section-6" data-bg="#BE300C">
                     <div class="container">
-                        <h2 class="organizers__title subtitle">Организаторы</h2>
+                        <h2 class="organizers__title subtitle" data-aos="fade-up">Организаторы</h2>
                         <div class="organizers__row">
-                            <div class="organizers__card">
+                            <div class="organizers__card" data-aos="flip-right">
                                 <h3 class="organizers__card-title">Благотворительный Фонд "Благословите женщину"</h3>
                             </div>
-                            <div class="organizers__card">
+                            <div class="organizers__card" data-aos="flip-right">
                                 <h3 class="organizers__card-title">Шарм Медиа Групп</h3>
                             </div>
-                            <div class="organizers__card">
+                            <div class="organizers__card" data-aos="flip-right">
                                 <h3 class="organizers__card-title"> Деловое издание "Персоны двух столиц"</h3>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section id="partners" class="main__partners partners">
-                    <h2 class="partners__title subtitle">Партнеры форума</h2>
+                    <h2 class="partners__title subtitle" data-aos="fade-up data-aos=" flip-right"">Партнеры форума</h2>
                     <div class="partners__row">
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
+                        <div class="partners__card" data-aos="flip-right">
+                            <div class="partners__wrapper-image"><img class="hoverEffect" src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
                         </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
+                        <div class="partners__card" data-aos="flip-right">
+                            <div class="partners__wrapper-image"><img class="hoverEffect" src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
                         </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
+                        <div class="partners__card" data-aos="flip-right">
+                            <div class="partners__wrapper-image"><img class="hoverEffect" src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
                         </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
+                        <div class="partners__card" data-aos="flip-right">
+                            <div class="partners__wrapper-image"><img class="hoverEffect" src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
                         </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
+                        <div class="partners__card" data-aos="flip-right">
+                            <div class="partners__wrapper-image"><img class="hoverEffect" src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
                         </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
+                        <div class="partners__card" data-aos="flip-right">
+                            <div class="partners__wrapper-image"><img class="hoverEffect" src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
                         </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
+                        <div class="partners__card" data-aos="flip-right">
+                            <div class="partners__wrapper-image"><img class="hoverEffect" src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
                         </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
-                        </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
-                        </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
-                        </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
-                        </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
-                        </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
-                        </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
-                        </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/duet.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
-                        </div>
-                        <div class="partners__card">
-                            <div class="partners__wrapper-image"><img src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
+                        <div class="partners__card" data-aos="flip-right">
+                            <div class="partners__wrapper-image"><img class="hoverEffect" src="./assets/images/partners/jazz.png" alt="Дуэт Brothers" title="Дуэт Brothers патнер форума" width="110" height="110"></div>
                         </div>
                     </div>
                 </section>
@@ -805,11 +565,11 @@
                 <div class='light x8'></div>
                 <div class='light x9'></div>
             </div>
-            <section id="contact" class="main__contact contact">
+            <section id="contact" class="main__contact contact" data-name="section-7" data-bg="#CFA453">
                 <div class="container">
                     <div class="contact__row">
-                        <h2 class="contact__title subtitle">Связаться с нами</h2>
-                        <div class="contact__wrapper">
+                        <h2 class="contact__title subtitle" data-aos="fade-up">Связаться с нами</h2>
+                        <div class="contact__wrapper" data-aos="zoom-in">
                             <div class="contact__contact-block">
                                 <p class="contact__contact-description">Если у вас остались вопросы или вы желаете сделать предложение,
                                     оставьте ваши контакты и сообщение в форме ниже. Наш менеджер свяжеться с вами в самое ближайшее время и

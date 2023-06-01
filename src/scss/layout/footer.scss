@@ -59,6 +59,7 @@
 	&__links {
 		flex: 0 1 33.33%;
 		@include mix.displayFlex(flex, center, center);
+		gap: 10px;
 	}
 
 	&__list {

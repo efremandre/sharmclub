@@ -2,5 +2,9 @@
 import AOS from 'aos'
 
 export function aos() {
-	AOS.init()
+	AOS.init({
+		duration: 1600,
+		anchorPlacement: 'top-bottom',
+		once: false
+	})
 }

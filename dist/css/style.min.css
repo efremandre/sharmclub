@@ -2056,6 +2056,30 @@ a:focus {
   text-transform: uppercase;
 }
 
+.hoverEffect {
+  transition: transform 1.3s ease;
+}
+@media (any-hover: hover) {
+  .hoverEffect:hover {
+    transform: scale(1.1);
+  }
+}
+
+.shine {
+  animation: shine 4s infinite;
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0px 0px 60px rgba(240, 209, 123, 0.7);
+  }
+  50% {
+    box-shadow: 0px 0px 60px rgba(240, 209, 123, 0);
+  }
+  100% {
+    box-shadow: 0px 0px 60px rgba(240, 209, 123, 0.7);
+  }
+}
 .red {
   color: linear-gradient(263.09deg, #F0D17B 0%, #CFA453 100%);
 }
@@ -2256,7 +2280,8 @@ a:focus {
   }
 }
 .swiper {
-  max-width: 900px;
+  width: 100%;
+  max-width: 960px;
   height: 100%;
   margin: 0;
 }
@@ -2317,7 +2342,7 @@ a:focus {
 }
 
 .swiper-pagination > span {
-  background: #9F3119;
+  background: #821f09;
 }
 
 .swiper-pagination-bullet {
@@ -2732,18 +2757,21 @@ a:focus {
 }
 
 .about-forum {
-  background: #9F3119 url("../assets/images/about-forum/bg-decore-forum.png") center right no-repeat;
+  background: url("../assets/images/about-forum/bg-decore-forum.png") center right no-repeat;
 }
 .about-forum__row {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row-reverse;
-  margin: 0 -2em 3em -2em;
+  gap: 3em;
+  margin: 0 0 3em;
+}
+.about-forum__row:last-child {
+  margin: 0;
 }
 .about-forum__content {
   flex: 0 1 55%;
-  padding: 0 2em;
 }
 .about-forum__title {
   margin-bottom: 0.5em;
@@ -2768,48 +2796,65 @@ a:focus {
   margin-bottom: 0;
 }
 .about-forum__image-wrapper {
-  flex: 0 1 45%;
+  flex: 0 1 50%;
   height: 400px;
   overflow: hidden;
-  padding: 0 2em;
+  border-radius: 8px;
 }
 .about-forum__image-wrapper > img {
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 .main__speakers {
   padding: 3em 0;
 }
 
+.speakers {
+  position: relative;
+  overflow: hidden;
+}
 .speakers__title {
   margin-bottom: 2em;
+  position: relative;
+  z-index: 2;
 }
 .speakers__grid {
+  width: 100%;
+  position: relative;
+  z-index: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 120px 20px;
   transition: transform 0.5s ease-in;
 }
+
 .card-speacker {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
   perspective: 1000px;
   box-sizing: content-box;
+  border-radius: 8px;
+  background: rgba(130, 51, 34, 0.2);
 }
 .card-speacker__body {
+  flex: 1 1 auto;
   box-sizing: border-box;
   position: relative;
-  width: 380px;
-  height: auto;
+  max-width: 370px;
   border: 2px solid #E8C87A;
   border-radius: 8px;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  background: #9F3119;
 }
 .card-speacker__body.flipped {
   transform: rotateY(180deg);
+}
+.card-speacker__body.flipped .card-speacker__image-wrapper {
+  transform: translateY(0);
+  transition: transform 0.6s ease;
 }
 .card-speacker__front, .card-speacker__back {
   box-sizing: border-box;
@@ -2822,10 +2867,13 @@ a:focus {
   padding: 16px;
   text-align: center;
   backface-visibility: hidden;
+  border-radius: 8px;
+  background: #821f09;
 }
 .card-speacker__front h3, .card-speacker__back h3 {
   margin: 0.8em 0;
   font-family: "Tenor", "Arial", "Helvetica", sans-serif;
+  line-height: 1.3em;
   font-size: calc(18px + 14 * ((100vw - 320px) / 1200));
 }
 .card-speacker__front span, .card-speacker__back span {
@@ -2853,6 +2901,7 @@ a:focus {
   margin: 0 auto;
   border: 2px solid #E8C87A;
   border-radius: 50%;
+  transition: transform 0.7s ease;
 }
 .card-speacker__image-wrapper > img {
   display: block;
@@ -2881,12 +2930,13 @@ a:focus {
   gap: 14px;
 }
 .card-speacker__theme, .card-speacker__slogan {
+  width: 100%;
   padding: 0.5em;
   border: 2px solid #E8C87A;
   border-radius: 8px;
 }
 .card-speacker__button {
-  max-width: 340px;
+  max-width: 100%;
 }
 .card-speacker__back {
   overflow: hidden;
@@ -2914,13 +2964,100 @@ a:focus {
   text-align: left;
 }
 
+.light {
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  width: 0;
+  top: 20vh;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  background-color: #E8C87A;
+  box-shadow: #E8C87A 0px 0px 16px 2px;
+}
+
+.x1 {
+  animation: floatUp 8s infinite linear;
+  transform: scale(1);
+}
+
+.x2 {
+  animation: floatUp 7s infinite linear;
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3 {
+  animation: floatUp 2.5s infinite linear;
+  transform: scale(0.5);
+  left: -15%;
+}
+
+.x4 {
+  animation: floatUp 4.5s infinite linear;
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5 {
+  animation: floatUp 8s infinite linear;
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6 {
+  animation: floatUp 3s infinite linear;
+  transform: scale(0.8);
+  left: -81%;
+}
+
+.x7 {
+  animation: floatUp 5.3s infinite linear;
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8 {
+  animation: floatUp 4.7s infinite linear;
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9 {
+  animation: floatUp 4.1s infinite linear;
+  transform: scale(0.9);
+  left: 85%;
+}
+
+@keyframes floatUp {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    top: 0vh;
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
 .main__theme {
   padding: 3em 0;
 }
 
 .theme {
   position: relative;
-  background: #9F3119;
+  transition: background-color 1000ms;
 }
 .theme::before, .theme::after {
   top: 0;
@@ -2985,8 +3122,7 @@ a:focus {
   z-index: 2;
   padding: 2em;
   border: 2px solid #E8C87A;
-  box-shadow: 0px 0px 30px rgba(240, 209, 123, 0.4);
-  background: #9F3119;
+  background: #821f09;
   border-radius: 8px;
 }
 .auction__image-wrapper {
@@ -3004,9 +3140,6 @@ a:focus {
   margin: 0 auto;
 }
 
-.place {
-  background: #9F3119;
-}
 .place__wrapper {
   display: flex;
   justify-content: space-between;
@@ -3072,7 +3205,7 @@ a:focus {
 }
 
 .price {
-  background: #9F3119 url("../assets/images/about-forum/bg-decore-forum.png") center right no-repeat;
+  background: url("../assets/images/about-forum/bg-decore-forum.png") center right no-repeat;
 }
 .price__ticker .ticker__item {
   animation: ticker 30s linear infinite;
@@ -3090,21 +3223,19 @@ a:focus {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 50px;
-  padding-bottom: 6px;
-  transition: transform 0.5s ease-in;
 }
 .price__card {
   display: flex;
   flex-direction: column;
   border: 2px solid #E8C87A;
   border-radius: 8px;
-  background: #9F3119;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: transform 1s ease-in-out;
+  background: #821f09;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 1s ease;
 }
 @media (any-hover: hover) {
   .price__card:hover {
-    transform: scale(1.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
   }
 }
 .price__card-title {
@@ -3250,7 +3381,7 @@ a:focus {
   padding: 2em;
   border: 2px solid #E8C87A;
   border-radius: 8px;
-  background: #9F3119 url("../assets/images/organizers/bg-decore-organisations-card.svg") center top/cover no-repeat;
+  background: #821f09 url("../assets/images/organizers/bg-decore-organisations-card.svg") center top/cover no-repeat;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-size 10s ease;
 }
@@ -3294,7 +3425,7 @@ a:focus {
   max-width: 200px;
   border: 2px solid #E8C87A;
   border-radius: 8px;
-  background: #9F3119;
+  background: #821f09;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-size 10s ease;
 }
@@ -3323,20 +3454,15 @@ a:focus {
 
 .main__contact {
   padding: 3em 0;
-  background: radial-gradient(83.23% 110.53% at 50% 50%, rgba(147, 128, 106, 0.36) 2.6%, rgba(182, 135, 78, 0.36) 63.7%, rgba(104, 77, 50, 0.36) 87.23%, rgba(210, 181, 107, 0.36) 100%), linear-gradient(88.64deg, #CFA453 -9.77%, #B9903D -7.91%, #BD9C4E 19.9%, #D0B769 42.04%, #E2D197 59.66%, #E6E3C0 78.08%, #DACD83 99.52%, #D2BB74 106.61%);
-  box-shadow: inset 0px 4px 24px rgba(255, 230, 97, 0.25);
+  background: linear-gradient(88.64deg, rgba(207, 164, 83, 0.3) -9.77%, rgba(185, 144, 61, 0.3) -7.91%, rgba(189, 156, 78, 0.3) 19.9%, rgba(208, 183, 105, 0.3) 42.04%, rgba(226, 209, 151, 0.3) 59.66%, rgba(230, 227, 192, 0.3) 78.08%, rgba(218, 205, 131, 0.3) 99.52%, rgba(210, 187, 116, 0.3) 106.61%);
 }
 
 .contact {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 80vh;
   color: #fff;
-}
-@media (any-hover: hover) {
-  .contact {
-    background-attachment: fixed;
-  }
 }
 .contact__wrapper {
   display: flex;
@@ -3423,6 +3549,7 @@ a:focus {
 .main {
   flex: 1 1 auto;
   background: #BE300C;
+  transition: background-color 1000ms;
 }
 
 .footer {
@@ -3474,6 +3601,7 @@ a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 .footer__list {
   display: flex;

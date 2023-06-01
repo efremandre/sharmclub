@@ -3,7 +3,6 @@
 @use '../base/extentsions';
 
 .place {
-	background: var.$mainAccentBg;
 
 	&__wrapper {
 		@include mix.displayFlex(flex, space-between, stretch);
