@@ -2446,7 +2446,7 @@ a:focus {
   width: 100%;
   max-width: 270px;
   padding: 1em;
-  font-size: calc(12px + 4 * ((100vw - 320px) / 1200));
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1200));
   color: #111111;
   line-height: 1.3em;
   font-weight: 400;
@@ -2548,7 +2548,7 @@ a:focus {
 .navigation__block {
   flex: 0 1 auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
@@ -3683,12 +3683,6 @@ a:focus {
   .burger {
     display: block;
   }
-  .navigation {
-    padding: 10px 0;
-  }
-  .navigation__contactinfo, .navigation__social {
-    display: none;
-  }
   .nav {
     position: fixed;
     z-index: 999;
@@ -3696,11 +3690,11 @@ a:focus {
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(263.09deg, #F0D17B 0%, #CFA453 100%);
+    background: #282828;
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s;
+    transition: 0.6s;
   }
   .nav._nav-active {
     opacity: 1;
@@ -3713,13 +3707,11 @@ a:focus {
   .nav__list > li {
     width: 100%;
   }
-  .nav__item-hidden {
-    display: block;
-  }
   .nav__link {
     padding: 30px 10px;
     text-align: center;
     font-size: 18px;
+    text-decoration: none;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -3755,54 +3747,8 @@ a:focus {
   .swiper-button-prev {
     left: 0;
   }
-  .main__about-us, .main__about-services, .main__contact {
+  .main__contact {
     padding: 2em 0;
-  }
-  .about-us__row {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin: 0;
-  }
-  .about-us__title {
-    text-align: center;
-  }
-  .about-us__text {
-    margin: 1em 0 1.5em 0;
-  }
-  .about-us__image-wrapper {
-    flex: 0 1 auto;
-    width: 100%;
-    padding: 0;
-  }
-  .about-us__buttons {
-    display: none;
-  }
-  .about-services__row {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin: 0;
-  }
-  .about-services__content {
-    padding: 0 1em;
-  }
-  .about-services__title {
-    text-align: center;
-  }
-  .about-services__text {
-    margin-bottom: 1.5em;
-  }
-  .about-services__image-wrapper {
-    flex: 0 1 auto;
-    width: 100%;
-    padding: 0;
-  }
-  .about-services__button {
-    margin: 0 auto;
-  }
-  .services__grid {
-    grid-gap: 30px;
   }
 }
 @media screen and (max-width: 769.98px) {
@@ -3814,13 +3760,20 @@ a:focus {
     opacity: 1;
   }
   .navigation__wrapper {
-    justify-content: space-between;
+    gap: 30px;
   }
   .navigation__block {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 0 20px;
+    gap: 0 30px;
+  }
+  .navigation__buttons {
+    gap: 1.5em;
+  }
+  .navigation__button {
+    max-width: 160px;
+    padding: 1.2em 1em;
   }
   .phone__link {
     font-size: 14px;
@@ -3829,64 +3782,17 @@ a:focus {
     height: 300px;
     margin: 0;
   }
-  .about-us__row {
-    gap: 20px;
-  }
-  .about-us__content {
-    padding: 0;
-  }
-  .about-us__text {
-    margin: 1em 0 0 0;
-  }
-  .about-us__text > p {
-    margin-bottom: 0.5em;
-  }
-  .about-us__image-wrapper {
-    padding: 0;
-  }
-  .about-us__buttons {
-    display: none;
-  }
-  .about-services__row {
-    gap: 20px;
-  }
-  .about-services__content {
-    padding: 0;
-  }
-  .about-services__title {
-    text-align: center;
-  }
-  .about-services__text {
-    margin-bottom: 1.5em;
-  }
-  .about-services__button {
-    margin: 0 auto;
-  }
-  .services__wrapper-card {
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-  .services__grid {
-    grid-template-columns: repeat(6, 300px);
-    grid-template-rows: repeat(1, 1fr);
-  }
 }
 @media screen and (max-width: 569.98px) {
   .container {
     padding: 0 1em;
-  }
-  .logo {
-    width: 60px;
-  }
-  .navigation__phone {
-    display: none;
   }
   .fullscreen__feature-body {
     display: none;
   }
   .fullscreen__buttons {
     width: 100%;
-    gap: 15px;
+    gap: 20px;
   }
   .card__title-wrapper_services {
     transform: translateY(73%);
@@ -3894,15 +3800,15 @@ a:focus {
   .card__title-wrapper_services-list {
     transform: translateY(0);
   }
-  .main-bcard {
-    padding: 1em;
-  }
   .footer__logo {
     display: block;
     flex: 0 1 100px;
   }
 }
 @media screen and (max-width: 429.98px) {
+  .navigation__buttons {
+    gap: 10px;
+  }
   .footer__wrapper {
     display: block;
   }

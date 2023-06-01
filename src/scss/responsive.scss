@@ -44,80 +44,11 @@
 
 	.main {
 
-		&__about-us,
-		&__about-services,
 		&__contact {
 			padding: 2em 0;
 		}
 	}
 
-	.about-us {
-		&__row {
-			flex-direction: column;
-			align-items: center;
-			gap: 30px;
-			margin: 0;
-		}
-
-		&__title {
-			text-align: center;
-		}
-
-		&__text {
-			margin: 1em 0 1.5em 0;
-
-			&>p {}
-		}
-
-		&__image-wrapper {
-			flex: 0 1 auto;
-			width: 100%;
-			padding: 0;
-		}
-
-		&__buttons {
-			display: none;
-		}
-	}
-
-	.about-services {
-		&__row {
-			flex-direction: column;
-			align-items: center;
-			gap: 30px;
-			margin: 0;
-		}
-
-		&__content {
-			padding: 0 1em;
-		}
-
-		&__title {
-			text-align: center;
-		}
-
-		&__text {
-			margin-bottom: 1.5em;
-
-			&>p {}
-		}
-
-		&__image-wrapper {
-			flex: 0 1 auto;
-			width: 100%;
-			padding: 0;
-		}
-
-		&__button {
-			margin: 0 auto;
-		}
-	}
-
-	.services {
-		&__grid {
-			grid-gap: 30px;
-		}
-	}
 }
 
 @media screen and (max-width: 769.98px) {
@@ -131,22 +62,27 @@
 		opacity: 1;
 
 		&__wrapper {
-			justify-content: space-between;
+			gap: 30px;
 		}
 
 		&__block {
 			@include mix.displayFlex(flex, start, center);
-			gap: 0 20px;
+			gap: 0 30px;
+		}
+
+		&__buttons {
+			gap: 1.5em;
+		}
+
+		&__button {
+			max-width: 160px;
+			padding: 1.2em 1em;
 		}
 	}
 
 	.phone {
 		&__link {
 			font-size: 14px;
-
-			&:after {}
-
-			&:hover {}
 		}
 	}
 
@@ -156,90 +92,11 @@
 			margin: 0;
 		}
 	}
-
-	.about-us {
-		&__row {
-			gap: 20px;
-		}
-
-		&__content {
-			padding: 0;
-		}
-
-		&__text {
-			margin: 1em 0 0 0;
-
-			&>p {
-				margin-bottom: 0.5em;
-			}
-		}
-
-		&__image-wrapper {
-			padding: 0;
-		}
-
-		&__buttons {
-			display: none;
-		}
-	}
-
-	.about-services {
-		&__row {
-			gap: 20px;
-		}
-
-		&__content {
-			padding: 0;
-		}
-
-		&__title {
-			text-align: center;
-		}
-
-		&__text {
-			margin-bottom: 1.5em;
-
-			&>p {}
-		}
-
-		&__image-wrapper {
-
-
-			&>img {}
-		}
-
-		&__button {
-			margin: 0 auto;
-		}
-	}
-
-	.services {
-
-		&__wrapper-card {
-			overflow-x: auto;
-			overflow-y: hidden;
-		}
-
-		&__grid {
-			grid-template-columns: repeat(6, 300px);
-			grid-template-rows: repeat(1, 1fr);
-		}
-	}
 }
 
 @media screen and (max-width: 569.98px) {
 	.container {
 		padding: 0 1em;
-	}
-
-	.logo {
-		width: 60px;
-	}
-
-	.navigation {
-		&__phone {
-			display: none;
-		}
 	}
 
 	.fullscreen {
@@ -249,7 +106,7 @@
 
 		&__buttons {
 			width: 100%;
-			gap: 15px;
+			gap: 20px;
 		}
 	}
 
@@ -263,10 +120,6 @@
 		}
 	}
 
-	.main-bcard {
-		padding: 1em;
-	}
-
 	.footer {
 		&__logo {
 			display: block;
@@ -276,6 +129,12 @@
 }
 
 @media screen and (max-width: 429.98px) {
+
+	.navigation {
+		&__buttons {
+			gap: 10px;
+		}
+	}
 
 	.footer {
 		&__wrapper {

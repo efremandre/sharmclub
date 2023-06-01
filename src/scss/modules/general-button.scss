@@ -7,7 +7,7 @@
 	width: 100%;
 	max-width: 270px;
 	padding: 1em;
-	@include mix.adaptivFont(16, 12);
+	@include mix.adaptivFont(16, 10);
 	color: var.$darkColor;
 	line-height: var.$generalLineHeight;
 	font-weight: 400;

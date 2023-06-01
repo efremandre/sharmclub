@@ -39,7 +39,7 @@ $sizeAfterEl: 1.1em;
 
 	&__block {
 		flex: 0 1 auto;
-		@include mix.displayFlex(flex, flex-end, center);
+		@include mix.displayFlex(flex, space-between, center);
 		gap: 20px;
 	}
 
