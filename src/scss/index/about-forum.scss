@@ -8,17 +8,24 @@
 }
 
 .about-forum {
-	// var.$mainAccentBg
-	background: url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
+
+	@media screen and (min-width: 769.98px) {
+		background: url('../../assets/images/about-forum/bg-decore-forum.png') center right no-repeat;
+	}
 
 	&__row {
 		@include mix.displayFlex(flex, start, center);
-		flex-direction: row-reverse;
 		gap: 3em;
 		margin: 0 0 3em;
 
 		&:last-child {
 			margin: 0;
+		}
+	}
+
+	@media (min-width: 789.98px) {
+		&__row_center {
+			flex-direction: row-reverse;
 		}
 	}
 
