@@ -2398,8 +2398,8 @@ a:focus {
 .button-up {
   position: fixed;
   z-index: 90000;
-  bottom: 100px;
-  right: 20px;
+  bottom: 30px;
+  left: 30px;
   visibility: hidden;
   transform: scale(0);
   opacity: 0;
@@ -2519,8 +2519,8 @@ a:focus {
 .ask-btn {
   position: fixed;
   z-index: 99;
-  bottom: 60px;
-  right: 50px;
+  bottom: 30px;
+  right: 30px;
   width: 50px;
   height: 50px;
 }
@@ -3278,19 +3278,45 @@ a:focus {
   background: #821f09;
   border-radius: 8px;
 }
-.auction__image-wrapper {
-  margin: 0 auto 1.5em auto;
-  max-width: 500px;
+.auction__auction-slide {
+  height: 100%;
 }
 .auction__description {
-  margin-bottom: 1em;
+  margin: 1em 0;
   padding: 0 1em;
   text-align: center;
   font-size: calc(16px + 6 * ((100vw - 320px) / 1200));
   line-height: 1.3em;
 }
+.auction__autor {
+  font-family: "Tenor", "Arial", "Helvetica", sans-serif;
+  color: #E8C87A;
+  font-size: calc(18px + 6 * ((100vw - 320px) / 1200));
+}
 .auction__button {
   margin: 0 auto;
+}
+
+.mySwiperAuction {
+  max-width: 100%;
+}
+
+.auction-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auction-slide__image-wrapper {
+  height: 400px;
+  overflow: hidden;
+  border: 2px solid #E8C87A;
+  border-radius: 8px;
+}
+.auction-slide__image-wrapper > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .place__wrapper {

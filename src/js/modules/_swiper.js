@@ -28,4 +28,29 @@ export function swiper() {
 			},
 		})
 	}
+
+	const port = new Swiper('.mySwiperAuction', {
+		modules: [Navigation, Pagination, Autoplay, FreeMode, Lazy],
+		lazy: true,
+		loop: true,
+		speed: 1000,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			dynamicBullets: true
+		},
+		autoplay: {
+			delay: 4000,
+		},
+		breakpoints: {
+			989: {
+				spaceBetween: 30,
+				slidesPerView: 3,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				}
+			},
+		},
+	})
 }
