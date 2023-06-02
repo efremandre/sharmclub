@@ -15,10 +15,11 @@
 									<input id="name" type="text" name="name" placeholder="Ваше имя">
 								</div>
 								<div class="form__input">
-									<input id="tel" type="tel" name="tel" placeholder="Ваш телефон" required data-phone-pattern>
+									<input data-input-req id="tel" type="tel" name="tel" placeholder="Ваш телефон" required
+										data-phone-pattern>
 								</div>
 								<div class="form__input">
-									<input id="mail" type="mail" name="mail" placeholder="Ваша почта" required>
+									<input data-input-req id="mail" type="mail" name="mail" placeholder="Ваша почта" required>
 								</div>
 							</div>
 							<div class="form__input">
@@ -31,7 +32,7 @@
 										конфиденциальности</a> и даю согласие на обработку персональных
 									данных</p>
 							</div>
-							<button class="contact__button-form button">Отправить</button>
+							<button disabled data-button-send class="contact__button-form button">Отправить</button>
 						</form>
 					</div>
 				</div>

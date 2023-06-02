@@ -2,6 +2,7 @@ import { aos } from "./modules/_aos.js"
 import { askBtn } from "./modules/_askBtn.js"
 import { burger } from './modules/_burger.js'
 import { changeBgScroll } from "./modules/_changeBgScroll.js"
+import { disabledBtn } from "./modules/_disabledBtn.js"
 import { sendForm } from "./modules/_form.js"
 import { hello } from './modules/_hello.js'
 import { pressDawn } from "./modules/_pressDawn.js"
@@ -21,6 +22,7 @@ try {
 	pressUp()
 	speakersCards()
 	speakers()
+	disabledBtn()
 	sendForm()
 	changeBgScroll()
 	askBtn()
