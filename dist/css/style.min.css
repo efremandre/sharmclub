@@ -2033,7 +2033,7 @@ a:focus {
   min-height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1200));
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1200));
 }
 
 .container {
@@ -2751,7 +2751,7 @@ a:focus {
   padding: 0 5px;
   font-weight: normal;
   font-weight: 400;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1200));
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1200));
   line-height: 1.3em;
   text-decoration: underline;
   transition: color 0.8s ease;
@@ -2767,7 +2767,7 @@ a:focus {
   position: relative;
   padding-left: 1.5em;
   font-weight: 400;
-  font-size: calc(14px + 4 * ((100vw - 320px) / 1200));
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1200));
 }
 .phone__link:after {
   top: calc(50% - 0.55em);
@@ -3070,7 +3070,6 @@ a:focus {
   transform: translateY(-30%);
   width: 100%;
   max-width: 340px;
-  height: 340px;
   margin: 0 auto;
   border: 2px solid #E8C87A;
   border-radius: 50%;
@@ -3585,12 +3584,6 @@ a:focus {
   z-index: 2;
   overflow-x: hidden;
 }
-.partners__row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
 .partners__card {
   flex-shrink: 0;
   display: flex;
@@ -3598,7 +3591,6 @@ a:focus {
   align-items: center;
   padding: 0.5em;
   width: 100%;
-  max-width: 200px;
   border: 2px solid #E8C87A;
   border-radius: 8px;
   background: #821f09;
@@ -3631,9 +3623,24 @@ a:focus {
 }
 .partners__bottom > p {
   font-family: "Tenor", "Arial", "Helvetica", sans-serif;
-  margin: 0.5em 0;
+  margin: 1em 0;
   font-size: calc(18px + 8 * ((100vw - 320px) / 1200));
   line-height: 1.3em;
+}
+
+.mySwiperPartners {
+  max-width: 100%;
+  min-height: 220px;
+}
+.mySwiperPartners .swiper-button-prev,
+.mySwiperPartners .swiper-button-next {
+  top: 90%;
+}
+.mySwiperPartners .swiper-button-next {
+  left: 50%;
+}
+.mySwiperPartners .swiper-button-prev {
+  left: 45%;
 }
 
 .contact {

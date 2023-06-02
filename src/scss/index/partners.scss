@@ -7,18 +7,11 @@
 	z-index: 2;
 	overflow-x: hidden;
 
-	&__row {
-		@include mix.displayFlex(flex, center, center);
-		gap: 30px;
-		// animation: marquee 200s linear infinite;
-	}
-
 	&__card {
 		flex-shrink: 0;
 		@include mix.displayFlex(flex, center, center);
 		padding: .5em;
 		width: 100%;
-		max-width: 200px;
 		border: 2px solid var.$accentColorTwo;
 		border-radius: var.$borderRadius;
 		background: var.$mainAccentBg;
@@ -53,19 +46,28 @@
 
 		&>p {
 			font-family: var.$subFamily;
-			margin: .5em 0;
+			margin: 1em 0;
 			@include mix.adaptivFont(26, 18);
 			line-height: 1.3em;
 		}
 	}
 
-	// @keyframes marquee {
-	// 	0% {
-	// 		transform: translateX(0);
-	// 	}
+}
 
-	// 	100% {
-	// 		transform: translateX(-100%);
-	// 	}
-	// }
+.mySwiperPartners {
+	max-width: 100%;
+	min-height: 220px;
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		top: 90%;
+	}
+
+	.swiper-button-next {
+		left: 50%;
+	}
+
+	.swiper-button-prev {
+		left: 45%;
+	}
 }

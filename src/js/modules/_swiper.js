@@ -53,4 +53,24 @@ export function swiper() {
 			},
 		},
 	})
+
+	const port2 = new Swiper('.mySwiperPartners', {
+		modules: [Navigation, Pagination, Autoplay, FreeMode, Lazy],
+		lazy: true,
+		loop: true,
+		speed: 500,
+		autoplay: {
+			delay: 2000,
+		},
+		breakpoints: {
+			989: {
+				spaceBetween: 30,
+				slidesPerView: 5,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				}
+			},
+		},
+	})
 }
