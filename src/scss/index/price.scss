@@ -51,6 +51,7 @@
 
 		&>h3 {
 			text-align: center;
+			text-transform: uppercase;
 			color: var.$lightColor;
 		}
 	}
@@ -87,6 +88,8 @@
 	}
 
 	&__button {
-		max-width: 400px;
+		max-width: 100%;
+		font-weight: 700;
+		@include mix.adaptivFont(18, 14);
 	}
 }

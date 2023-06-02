@@ -35,7 +35,6 @@
 		flex: 1 1 auto;
 		box-sizing: border-box;
 		position: relative;
-		// max-width: 370px;
 		width: 100%;
 		border: 2px solid var.$accentColorTwo;
 		border-radius: var.$borderRadius;
@@ -46,7 +45,7 @@
 			transform: rotateY(180deg);
 
 			.card-speacker__image-wrapper {
-				transform: translateY(0);
+				transform: translateY(0) scale(0);
 				transition: transform .6s ease;
 			}
 		}
