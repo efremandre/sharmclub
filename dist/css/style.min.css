@@ -2863,6 +2863,7 @@ a:focus {
   transform: translateY(-50%);
 }
 .fullscreen__date {
+  font-size: calc(18px + 8 * ((100vw - 320px) / 1200));
   color: #E8C87A;
 }
 .fullscreen__address {
@@ -2991,6 +2992,15 @@ a:focus {
   grid-gap: 120px 20px;
   transition: transform 0.5s ease-in;
 }
+.speakers__button {
+  margin: 2em auto 0 auto;
+  background: none;
+  border: 2px solid #E8C87A;
+  color: #E8C87A;
+}
+.speakers__card-speacker {
+  transition: opacity 0.6s ease;
+}
 
 .card-speacker {
   display: flex;
@@ -3060,10 +3070,12 @@ a:focus {
   transform: translateY(-30%);
   width: 100%;
   max-width: 340px;
+  height: 340px;
   margin: 0 auto;
   border: 2px solid #E8C87A;
   border-radius: 50%;
   transition: transform 0.7s ease;
+  background: #821f09;
 }
 .card-speacker__image-wrapper > img {
   display: block;
@@ -3383,7 +3395,7 @@ a:focus {
   background: url("../assets/images/about-forum/bg-decore-forum.png") center right no-repeat;
 }
 .price__ticker .ticker__item {
-  animation: ticker 30s linear infinite;
+  animation: ticker 20s linear infinite;
 }
 .price__wrapper-card {
   margin: 2em 0;
@@ -3559,11 +3571,6 @@ a:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-size 10s ease;
 }
-@media (any-hover: hover) {
-  .organizers__card:hover {
-    background-size: 150% 150%;
-  }
-}
 .organizers__card-title {
   font-family: "Tenor", "Arial", "Helvetica", sans-serif;
   font-size: calc(16px + 2 * ((100vw - 320px) / 1200));
@@ -3580,10 +3587,9 @@ a:focus {
 }
 .partners__row {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  gap: 60px;
-  animation: marquee 200s linear infinite;
+  gap: 30px;
 }
 .partners__card {
   flex-shrink: 0;
@@ -3600,8 +3606,11 @@ a:focus {
   transition: background-size 10s ease;
 }
 .partners__wrapper-image {
-  width: 115px;
-  height: 115px;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #E8C87A;
 }
 .partners__wrapper-image > img {
   display: block;
@@ -3613,13 +3622,18 @@ a:focus {
   width: 0;
   height: 0;
 }
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.partners__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2em;
+}
+.partners__bottom > p {
+  font-family: "Tenor", "Arial", "Helvetica", sans-serif;
+  margin: 0.5em 0;
+  font-size: calc(18px + 8 * ((100vw - 320px) / 1200));
+  line-height: 1.3em;
 }
 
 .contact {
@@ -3916,9 +3930,6 @@ a:focus {
   }
   .place__block-slider {
     flex: 0 1 100%;
-  }
-  .place__buttons {
-    flex-direction: row;
   }
 }
 @media screen and (max-width: 769.98px) {

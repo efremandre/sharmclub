@@ -8,9 +8,9 @@
 	overflow-x: hidden;
 
 	&__row {
-		@include mix.displayFlex(flex, start, center);
-		gap: 60px;
-		animation: marquee 200s linear infinite;
+		@include mix.displayFlex(flex, center, center);
+		gap: 30px;
+		// animation: marquee 200s linear infinite;
 	}
 
 	&__card {
@@ -27,8 +27,11 @@
 	}
 
 	&__wrapper-image {
-		width: 115px;
-		height: 115px;
+		overflow: hidden;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 2px solid var.$accentColorTwo;
 
 		&>img {
 			display: block;
@@ -43,13 +46,26 @@
 		height: 0;
 	}
 
-	@keyframes marquee {
-		0% {
-			transform: translateX(0);
-		}
+	&__bottom {
+		@include mix.displayFlex(flex, center, center);
+		flex-direction: column;
+		margin-top: 2em;
 
-		100% {
-			transform: translateX(-100%);
+		&>p {
+			font-family: var.$subFamily;
+			margin: .5em 0;
+			@include mix.adaptivFont(26, 18);
+			line-height: 1.3em;
 		}
 	}
+
+	// @keyframes marquee {
+	// 	0% {
+	// 		transform: translateX(0);
+	// 	}
+
+	// 	100% {
+	// 		transform: translateX(-100%);
+	// 	}
+	// }
 }

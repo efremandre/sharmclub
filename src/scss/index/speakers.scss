@@ -21,6 +21,17 @@
 		grid-gap: 120px 20px;
 		transition: transform .5s ease-in;
 	}
+
+	&__button {
+		margin: 2em auto 0 auto;
+		background: none;
+		border: 2px solid var.$accentColorTwo;
+		color: var.$accentColorTwo;
+	}
+
+	&__card-speacker {
+		transition: opacity .6s ease;
+	}
 }
 
 .card-speacker {
@@ -99,10 +110,12 @@
 		transform: translateY(-30%);
 		width: 100%;
 		max-width: 340px;
+		height: 340px;
 		margin: 0 auto;
 		border: 2px solid var.$accentColorTwo;
 		border-radius: 50%;
 		transition: transform .7s ease;
+		background: var.$mainAccentBg;
 
 		&>img {
 			display: block;

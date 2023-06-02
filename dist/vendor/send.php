@@ -5,11 +5,13 @@ $phone = $_POST['tel'];
 $phone = str_replace(['(',')','-','+',' '], '', $phone );
 $message = $_POST['message'];
 $message = str_replace(['(',')','{','}','[', ']', '+', '=', '$', '_', '<', '>', '/', '/\/'], '', $message );
-$token = "6166107767:AAE5qAMrakvDzhV5v58AdrnieOyTJf1R5Ew";
-$chat_id = "-924787032";
+$mail = $_POST['mail'];
+$token = "6199939669:AAH-pPnW-dGv5DQvAmpM9YGpOh4x4aRu9OY";
+$chat_id = "-923866039";
 $arr = array(
     'Имя пользователя: ' => $name,
     'Телефон: ' => $phone,
+    'Email: ' => $mail,
     'Сообщение: ' => $message
 );
 

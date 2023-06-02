@@ -55,6 +55,7 @@
 	}
 
 	&__date {
+		@include mix.adaptivFont(26, 18);
 		color: var.$accentColorTwo;
 	}
 

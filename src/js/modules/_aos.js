@@ -5,6 +5,6 @@ export function aos() {
 	AOS.init({
 		duration: 1600,
 		anchorPlacement: 'top-bottom',
-		once: false
+		once: true
 	})
 }

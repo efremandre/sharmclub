@@ -25,6 +25,10 @@ export function speakersCards() {
 								<h3>${el.title.name} ${el.title.surname}</h3>
 							</div>
 
+							<div class="card-speacker__city">
+								<p>г. ${el.сity}</p>
+							</div>
+
 							<div class="card-speacker__competencies">
 								<p>${el.title.competencies}</p>
 							</div>
@@ -52,7 +56,7 @@ export function speakersCards() {
 
 						<div class="card-speacker__buttons">
 							<div class="card-speacker__slogan">
-								<p><span>Девиз:</span> Возможности женщины безграничны</p>
+								<p><span>Девиз:</span> ${el.slogan}</p>
 							</div>
 							<button value="close" class="card-speacker__button button">Закрыть</button>
 						</div>
@@ -65,6 +69,7 @@ export function speakersCards() {
 
 			getOutputCard(DATA)
 		}
+
 	}
 
 	creatCards()
