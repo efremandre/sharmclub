@@ -80,11 +80,16 @@
 			padding: 1.6em 0;
 		}
 
-
-
 		.speakers {
-			&__title {
+			s &__title {
 				margin-bottom: 3em;
+			}
+		}
+
+		.timing {
+			&__card {
+				width: 100%;
+				padding: .5rem 1rem;
 			}
 		}
 	}

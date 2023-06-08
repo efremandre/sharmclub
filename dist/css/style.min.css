@@ -3278,7 +3278,7 @@ a:focus {
 .timing__card {
   box-sizing: border-box;
   width: 80%;
-  padding: 1.3rem 1rem;
+  padding: 1rem;
   font-family: "Tenor", "Arial", "Helvetica", sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -3972,8 +3972,12 @@ a:focus {
   .main__about-forum, .main__speakers, .main__auction, .main__theme, .main__price, .main__organizers, .main__partners, .main__contact {
     padding: 1.6em 0;
   }
-  .main .speakers__title {
+  s .main .speakers__title {
     margin-bottom: 3em;
+  }
+  .main .timing__card {
+    width: 100%;
+    padding: 0.5rem 1rem;
   }
   .navigation {
     opacity: 1;

@@ -32,7 +32,7 @@
 	&__card {
 		box-sizing: border-box;
 		width: 80%;
-		padding: 1.3rem 1rem;
+		padding: 1rem;
 		font-family: var.$subFamily;
 		text-align: center;
 		text-transform: uppercase;
@@ -54,7 +54,6 @@
 			@include mix.adaptivFont(20, 16);
 			line-height: 1.3em;
 		}
-
 	}
 
 	&__card-description {
