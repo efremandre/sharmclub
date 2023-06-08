@@ -1955,7 +1955,7 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-style: normal;
 }
-.burger:before, .burger:after, .footer__address::before, .place__address::before, .theme::before, .theme::after, .phone__link:after, .form-preloader, .form-preloader:before {
+.burger:before, .burger:after, .footer__address::before, .place__address::before, .timing::before, .timing::after, .phone__link:after, .form-preloader, .form-preloader:before {
   position: absolute;
   content: "";
 }
@@ -2230,9 +2230,13 @@ a:focus {
 
 .button-dawn {
   position: absolute;
-  z-index: 4;
   left: calc(50% - 25px);
-  bottom: 10px;
+  bottom: 5px;
+}
+@media screen and (max-width: 769.98px) {
+  .button-dawn {
+    display: none;
+  }
 }
 .button-dawn__btn {
   position: relative;
@@ -2271,18 +2275,17 @@ a:focus {
 
 @keyframes scale {
   0% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
   50% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 }
 .swiper {
-  width: 100%;
-  max-width: 960px;
+  max-width: 900px;
   height: 100%;
   margin: 0;
 }
@@ -2819,6 +2822,7 @@ a:focus {
   align-items: center;
   height: 100%;
   min-height: 100vh;
+  padding: 120px 0 70px;
   background: url("../assets/images/hero/hero-bg.png") top center/cover no-repeat;
 }
 @media (any-hover: hover) {
@@ -2842,6 +2846,9 @@ a:focus {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+}
+.fullscreen__logopark {
+  max-width: 171px;
 }
 .fullscreen__date, .fullscreen__address {
   position: relative;
@@ -2880,6 +2887,8 @@ a:focus {
   font-family: "Fira Sans", sans-serif;
 }
 .fullscreen__subtitle {
+  width: 100%;
+  max-width: 850px;
   font-size: calc(14px + 6 * ((100vw - 320px) / 1200));
   margin-bottom: 2em;
   color: #fff;
@@ -2910,7 +2919,7 @@ a:focus {
 .fullscreen__ticker {
   position: absolute;
   left: 0;
-  bottom: 7%;
+  bottom: 30px;
   width: 100%;
 }
 .fullscreen__ticker .ticker__item {
@@ -2987,9 +2996,11 @@ a:focus {
   width: 100%;
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 120px 20px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 120px 20px;
   transition: transform 0.5s ease-in;
 }
 .speakers__button {
@@ -3006,10 +3017,27 @@ a:focus {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+  width: 100%;
+  max-width: 370px;
   perspective: 1000px;
   box-sizing: content-box;
   border-radius: 8px;
   background: rgba(130, 51, 34, 0.2);
+}
+.card-speacker__button_get {
+  display: none;
+}
+.card-speacker:last-child .card-speacker__button {
+  display: none;
+}
+.card-speacker:last-child .card-speacker__button_close {
+  display: flex;
+}
+.card-speacker:last-child .card-speacker__button_get {
+  display: flex;
+}
+.card-speacker:last-child .card-speacker__slogan {
+  display: none;
 }
 .card-speacker__body {
   flex: 1 1 auto;
@@ -3092,7 +3120,7 @@ a:focus {
 }
 .card-speacker__competencies {
   flex: 1 1 auto;
-  font-size: calc(10px + 4 * ((100vw - 320px) / 1200));
+  font-size: calc(14px + 0 * ((100vw - 320px) / 1200));
   margin-bottom: 1em;
 }
 .card-speacker__buttons {
@@ -3224,32 +3252,32 @@ a:focus {
     opacity: 0;
   }
 }
-.theme {
+.timing {
   position: relative;
 }
-.theme::before, .theme::after {
+.timing::before, .timing::after {
   top: 0;
   width: 200px;
   height: 100%;
 }
-.theme::after {
+.timing::after {
   left: 0;
-  background: url("../assets/images/theme/bg-decore-theme-right.png") right center no-repeat;
+  background: url("../assets/images/timing/bg-decore-timing-right.png") right center no-repeat;
 }
-.theme::before {
+.timing::before {
   right: 0;
-  background: url("../assets/images/theme/bg-decore-theme-left.png") left center no-repeat;
+  background: url("../assets/images/timing/bg-decore-timing-left.png") left center no-repeat;
 }
-.theme__wrapper {
+.timing__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 30px;
 }
-.theme__card {
+.timing__card {
   box-sizing: border-box;
-  width: 100%;
+  width: 80%;
   padding: 1.3rem 1rem;
   font-family: "Tenor", "Arial", "Helvetica", sans-serif;
   text-align: center;
@@ -3259,22 +3287,22 @@ a:focus {
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.theme__number {
+.timing__number {
   font-size: calc(23px + 20 * ((100vw - 320px) / 1200));
   color: #E8C87A;
   line-height: 1.2em;
 }
-.theme__card-title > h3 {
+.timing__card-title > h3 {
   margin: 0.5em 0;
-  font-size: calc(18px + 8 * ((100vw - 320px) / 1200));
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1200));
   line-height: 1.3em;
 }
-.theme__card-description {
-  margin-bottom: 1em;
+.timing__card-description {
+  margin-bottom: 0.5em;
   font-size: 18px;
   text-transform: none;
 }
-.theme__button {
+.timing__button {
   margin: 0 auto;
 }
 
@@ -3336,11 +3364,8 @@ a:focus {
   align-items: stretch;
 }
 .place__block-description {
-  flex: 0 1 40%;
+  flex: 0 1 50%;
   padding: 3em;
-}
-.place__description-body {
-  max-width: 500px;
 }
 .place__title {
   text-align: left;
@@ -3383,7 +3408,7 @@ a:focus {
   background: none;
 }
 .place__block-slider {
-  flex: 0 1 60%;
+  flex: 1 1 50%;
 }
 .place__slider-container {
   position: relative;
@@ -3738,7 +3763,7 @@ a:focus {
   background: #BE300C;
   transition: background-color 1000ms;
 }
-.main__about-forum, .main__speakers, .main__auction, .main__theme, .main__price, .main__organizers, .main__partners, .main__contact {
+.main__about-forum, .main__speakers, .main__auction, .main__timing, .main__price, .main__organizers, .main__partners, .main__contact {
   padding: 3em 0;
 }
 
@@ -3789,7 +3814,7 @@ a:focus {
 .footer__links {
   flex: 0 1 33.33%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
 }
@@ -3905,9 +3930,6 @@ a:focus {
   }
 }
 @media (max-width: 1200px) and (min-width: 986.98px) {
-  .card-speacker__image-block {
-    height: 210px;
-  }
   .card-speacker__name > h3 {
     margin: 0;
   }
@@ -3944,6 +3966,9 @@ a:focus {
   .swiper-button-prev {
     display: none;
   }
+  .button-dawn {
+    display: none;
+  }
   .main__about-forum, .main__speakers, .main__auction, .main__theme, .main__price, .main__organizers, .main__partners, .main__contact {
     padding: 1.6em 0;
   }
@@ -3971,6 +3996,12 @@ a:focus {
   }
   .phone__link {
     font-size: 14px;
+  }
+  .ticker__item {
+    font-size: 18px;
+  }
+  .fullscreen__ticker {
+    bottom: 10px;
   }
   .fullscreen__wrapper-image {
     height: 300px;
@@ -4013,6 +4044,9 @@ a:focus {
 @media screen and (max-width: 569.98px) {
   .container {
     padding: 0 1em;
+  }
+  .fullscreen {
+    padding: 115px 0 50px;
   }
   .fullscreen__feature-body {
     display: none;
