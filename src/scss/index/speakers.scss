@@ -16,9 +16,11 @@
 		width: 100%;
 		position: relative;
 		z-index: 2;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		grid-gap: 120px 20px;
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 120px 20px;
 		transition: transform .5s ease-in;
 	}
 
@@ -36,10 +38,34 @@
 
 .card-speacker {
 	@include mix.displayFlex(flex, flex-start, stretch);
+	width: 100%;
+	max-width: 370px;
 	perspective: 1000px;
 	box-sizing: content-box;
 	border-radius: var.$borderRadius;
 	background: rgba(130, 51, 34, .2);
+
+	&__button_get {
+		display: none;
+	}
+
+	&:last-child {
+		.card-speacker__button {
+			display: none;
+		}
+
+		.card-speacker__button_close {
+			display: flex;
+		}
+
+		.card-speacker__button_get {
+			display: flex;
+		}
+
+		.card-speacker__slogan {
+			display: none;
+		}
+	}
 
 
 	&__body {
@@ -133,7 +159,7 @@
 
 	&__competencies {
 		flex: 1 1 auto;
-		@include mix.adaptivFont(14, 10);
+		@include mix.adaptivFont(14, 14);
 		margin-bottom: 1em;
 	}
 

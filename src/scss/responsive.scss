@@ -4,9 +4,6 @@
 
 @media (max-width: 1200px) and (min-width: 986.98px) {
 	.card-speacker {
-		&__image-block {
-			height: 210px;
-		}
 
 		&__name {
 			&>h3 {
@@ -66,6 +63,10 @@
 		display: none;
 	}
 
+	.button-dawn {
+		display: none;
+	}
+
 	.main {
 
 		&__about-forum,
@@ -78,6 +79,8 @@
 		&__contact {
 			padding: 1.6em 0;
 		}
+
+
 
 		.speakers {
 			&__title {
@@ -114,7 +117,17 @@
 		}
 	}
 
+	.ticker {
+		&__item {
+			font-size: 18px;
+		}
+	}
+
 	.fullscreen {
+		&__ticker {
+			bottom: 10px;
+		}
+
 		&__wrapper-image {
 			height: 300px;
 			margin: 0;
@@ -179,6 +192,8 @@
 	}
 
 	.fullscreen {
+		padding: 115px 0 50px;
+
 		&__feature-body {
 			display: none;
 		}

@@ -2,7 +2,7 @@
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
 
-.theme {
+.timing {
 	position: relative;
 
 	&::before,
@@ -15,12 +15,12 @@
 
 	&::after {
 		left: 0;
-		background: url('../../assets/images/theme/bg-decore-theme-right.png') right center no-repeat;
+		background: url('../../assets/images/timing/bg-decore-timing-right.png') right center no-repeat;
 	}
 
 	&::before {
 		right: 0;
-		background: url('../../assets/images/theme/bg-decore-theme-left.png') left center no-repeat;
+		background: url('../../assets/images/timing/bg-decore-timing-left.png') left center no-repeat;
 	}
 
 	&__wrapper {
@@ -31,7 +31,7 @@
 
 	&__card {
 		box-sizing: border-box;
-		width: 100%;
+		width: 80%;
 		padding: 1.3rem 1rem;
 		font-family: var.$subFamily;
 		text-align: center;
@@ -51,14 +51,14 @@
 	&__card-title {
 		&>h3 {
 			margin: .5em 0;
-			@include mix.adaptivFont(26, 18);
+			@include mix.adaptivFont(20, 16);
 			line-height: 1.3em;
 		}
 
 	}
 
 	&__card-description {
-		margin-bottom: 1em;
+		margin-bottom: .5em;
 		font-size: 18px;
 		text-transform: none;
 	}

@@ -2,7 +2,7 @@
 @use 'fullscreen';
 @use 'about-forum';
 @use 'speakers';
-@use 'theme';
+@use 'timing';
 @use 'auction';
 @use 'place';
 @use 'price';
@@ -20,7 +20,7 @@
 	&__about-forum,
 	&__speakers,
 	&__auction,
-	&__theme,
+	&__timing,
 	&__price,
 	&__organizers,
 	&__partners,
