@@ -76,15 +76,30 @@
 
 	&__label {
 		@include mix.displayFlex(flex, center, center);
+		flex-direction: column;
 		padding: 1em;
 		border: 2px solid var.$accentColorTwo;
 		border-radius: var.$borderRadius;
 		margin-bottom: 1em;
 
 		&>p {
-			@include mix.adaptivFont(22, 16);
-			line-height: 1.3em;
+			text-align: center;
+
+			&>strong {
+				color: var.$accentColorTwo;
+			}
 		}
+	}
+
+	&__label_old {
+		text-decoration: line-through;
+		opacity: .7;
+		@include mix.adaptivFont(16, 12);
+	}
+
+	&__label_new {
+		@include mix.adaptivFont(24, 18);
+		line-height: 1.3em;
 	}
 
 	&__button {
@@ -92,4 +107,5 @@
 		font-weight: 700;
 		@include mix.adaptivFont(18, 14);
 	}
+
 }
