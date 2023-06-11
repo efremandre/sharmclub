@@ -3,6 +3,8 @@ $name = $_POST['name'];
 $name = str_replace(['(',')','{','}','[', ']', '+', '=', '$', '_', '<', '>', '/', '/\/'], '', $name );
 $phone = $_POST['tel'];
 $phone = str_replace(['(',')','-','+',' '], '', $phone );
+$messanger = $_POST['messanger'];
+$messanger = str_replace(['(',')','-','+',' '], '', $messanger );
 $message = $_POST['message'];
 $message = str_replace(['(',')','{','}','[', ']', '+', '=', '$', '_', '<', '>', '/', '/\/'], '', $message );
 $mail = $_POST['mail'];
@@ -11,6 +13,7 @@ $chat_id = "-923866039";
 $arr = array(
     'Имя пользователя: ' => $name,
     'Телефон: ' => $phone,
+		'Мессенджер: ' => $messanger,
     'Email: ' => $mail,
     'Сообщение: ' => $message
 );
