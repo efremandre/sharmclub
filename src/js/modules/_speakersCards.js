@@ -18,7 +18,7 @@ export function speakersCards() {
 					<div class="card-speacker__body">
 						<div class="card-speacker__front">
 							<div class="card-speacker__image-block" data-aos="zoom-in">
-								<div class="card-speacker__image-wrapper"><img class="hoverEffect" src="${el.image.url}" alt="${el.title.name} ${el.title.surname}"></div>
+								<div class="card-speacker__image-wrapper"><img class="hoverEffect" src="${el.image.url}" alt="${el.title.name} ${el.title.surname}" width="340" height="340"></div>
 							</div>
 							<div class="card-speacker__content">
 								<div class="card-speacker__name">

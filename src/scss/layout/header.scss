@@ -82,13 +82,13 @@ $sizeAfterEl: 1.1em;
 		font-weight: 400;
 		@include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
 		line-height: var.$generalLineHeight;
-		text-decoration: underline;
+		text-decoration: none;
 		transition: color .8s ease;
 
 		@media (any-hover: hover) {
 			&:hover {
 				color: var.$accentColor;
-				text-decoration: none;
+				text-decoration: underline;
 			}
 		}
 	}

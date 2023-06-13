@@ -42,6 +42,7 @@ export function swiper() {
 		autoplay: {
 			delay: 4000,
 		},
+		spaceBetween: 20,
 		breakpoints: {
 			989: {
 				spaceBetween: 30,
@@ -62,6 +63,7 @@ export function swiper() {
 		autoplay: {
 			delay: 2000,
 		},
+		spaceBetween: 20,
 		breakpoints: {
 			989: {
 				spaceBetween: 30,

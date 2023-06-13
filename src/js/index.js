@@ -11,6 +11,7 @@ import { scrollHeader } from "./modules/_scrollHeader.js"
 import { speakers } from "./modules/_speakers.js"
 import { speakersCards } from "./modules/_speakersCards.js"
 import { swiper } from "./modules/_swiper.js"
+import { hiddenSupportBtn } from "./modules/_hiddenSupportBtn.js"
 
 try {
 	hello()
@@ -26,6 +27,7 @@ try {
 	sendForm()
 	changeBgScroll()
 	askBtn()
+	hiddenSupportBtn()
 } catch (error) {
 	console.error(error.message)
 }
