@@ -3,17 +3,22 @@ export function speakersCards() {
 	const getCards = async () => {
 		const response = await fetch('../../files/speakers.json')
 		const data = await response.json()
+
 		return data
 	}
 
+
 	const creatCards = async () => {
+		const cardGrid = document.querySelector('.speakers__grid')
+		const showMore = document.querySelector('#showMore')
 		const DATA = await getCards()
 
-		const cardGrid = document.querySelector('.speakers__grid')
+		let current = 6
+		const slices = DATA.slice(0, current)
 
 		if (cardGrid) {
 			const getOutputCard = (data) => {
-				cardGrid.innerHTML = data.map(el => `
+				cardGrid.innerHTML += data.map(el => `
 				<div class="speakers__card-speacker card-speacker" data-aos="fade-up">
 					<div class="card-speacker__body">
 						<div class="card-speacker__front">
@@ -37,9 +42,7 @@ export function speakersCards() {
 									<div class="card-speacker__theme">
 										<p><span>Тема выступления:</span><br>${el.theme}</p>
 									</div>
-									<a target="_blank" href="https://t.me/SHARMFORUM" class="card-speacker__button card-speacker__button_get button">Стать спикером</a>
-									<button value="open" class="card-speacker__button card-speacker__button_get button">Подробнее</button>
-									<button value="open" class="card-speacker__button button">Подробнее о спикере</button>
+									${(el.id === 'id') ? `<a target="_blank" href="https://t.me/SHARMFORUM" class="card-speacker__button card-speacker__button_get button">Стать спикером</a> <button value="open" class="card-speacker__button card-speacker__button_get button">Подробнее</button>` : `<button value="open" class="card-speacker__button button">Подробнее о спикере</button>`}
 								</div>
 							</div>
 						</div>
@@ -65,9 +68,18 @@ export function speakersCards() {
 						</div>
 					</div>
 				</div>`).join('')
-
 			}
-			getOutputCard(DATA)
+			getOutputCard(slices)
+
+			showMore.addEventListener('click', () => {
+				current += 3
+				const slices = DATA.slice(current, (current + 3))
+				if ((current + 3) >= DATA.length) {
+					showMore.style.display = 'none'
+				}
+
+				getOutputCard(slices)
+			})
 		}
 
 	}

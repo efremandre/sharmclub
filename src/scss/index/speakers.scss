@@ -45,28 +45,6 @@
 	border-radius: var.$borderRadius;
 	background: rgba(130, 51, 34, .2);
 
-	&__button_get {
-		display: none;
-	}
-
-	&:last-child {
-		.card-speacker__button {
-			display: none;
-		}
-
-		.card-speacker__button_close {
-			display: flex;
-		}
-
-		.card-speacker__button_get {
-			display: flex;
-		}
-
-		.card-speacker__slogan {
-			display: none;
-		}
-	}
-
 
 	&__body {
 		flex: 1 1 auto;
