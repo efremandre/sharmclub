@@ -63,6 +63,10 @@
 				transform: translateY(0) scale(0);
 				transition: transform .6s ease;
 			}
+
+			.card-speacker__bio {
+				overflow: auto;
+			}
 		}
 	}
 
@@ -165,7 +169,7 @@
 	}
 
 	&__bio {
-		overflow: auto;
+		overflow: hidden;
 		height: 70%;
 		text-align: left;
 
