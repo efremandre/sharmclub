@@ -4,13 +4,11 @@
 @use 'speakers';
 @use 'timing';
 @use 'auction';
-@use 'place';
 @use 'price';
 @use 'wrapper-bg';
 @use 'organizers';
 @use 'partners';
 @use 'contact';
-@use '../modules/modal-img';
 
 .main {
 	flex: 1 1 auto;

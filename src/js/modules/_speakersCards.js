@@ -42,7 +42,7 @@ export function speakersCards() {
 									<div class="card-speacker__theme">
 										<p><span>Тема выступления:</span><br>${el.theme}</p>
 									</div>
-									${(el.id === 'id') ? `<a target="_blank" href="https://t.me/SHARMFORUM" class="card-speacker__button card-speacker__button_get button">Стать спикером</a> <button value="open" class="card-speacker__button card-speacker__button_get button">Подробнее</button>` : `<button value="open" class="card-speacker__button button">Подробнее о спикере</button>`}
+									${(el.id === 'id') ? `<a target="_blank" href="https://t.me/SharmForum" class="card-speacker__button card-speacker__button_get button">Стать спикером</a> <button value="open" class="card-speacker__button card-speacker__button_get button">Подробнее</button>` : `<button value="open" class="card-speacker__button button">Подробнее о спикере</button>`}
 								</div>
 							</div>
 						</div>
@@ -72,9 +72,10 @@ export function speakersCards() {
 			getOutputCard(slices)
 
 			showMore.addEventListener('click', () => {
-				current += 3
 				const slices = DATA.slice(current, (current + 3))
-				if ((current + 3) >= DATA.length) {
+				current += 3
+
+				if (current >= DATA.length) {
 					showMore.style.display = 'none'
 				}
 

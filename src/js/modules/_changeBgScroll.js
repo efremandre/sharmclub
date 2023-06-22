@@ -17,7 +17,6 @@ export function changeBgScroll() {
 				.on('progress', event => {
 					const target = event.target.triggerElement()
 					main.style.backgroundColor = bgColor
-					target.classList.add('active')
 				})
 				.duration(function () {
 					return this.triggerElement().clientHeight
